@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* display: block; */
+}
+
+.App {
+  text-align: center;
+}
+
+@font-face {
+  font-family: 'Hlobus';
+  src: url('./fonts/ofont.ru_Hlobus.ttf');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/ofont.ru_Roboto\ Flex.ttf');
+}
+
+@font-face {
+  font-family: 'FortuneC';
+  src: url('./fonts/ofont.ru_FortuneC.ttf');
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: rgb(214, 214, 214);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(137, 137, 137);
+}
