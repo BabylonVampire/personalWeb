@@ -1,0 +1,21 @@
+.element-appiaranceFromCornerRight {
+    opacity: 0;
+    transform: translate3d(60px, 40px, 0);
+}
+
+.element-appiaranceFromCornerLeft {
+    opacity: 0;
+    transform: translate3d(-60px, 40px, 0);
+}
+
+.element-appiaranceFromCornerLeft.element-show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translate3d(0, 0, 0);
+}
+
+.element-appiaranceFromCornerRight.element-show {
+    opacity: 1;
+    transition: all 2s;
+    transform: translate3d(0, 0, 0);
+}

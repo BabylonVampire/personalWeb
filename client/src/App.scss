@@ -9,22 +9,32 @@
 }
 
 @font-face {
+  font-family: 'fontisland';
+  src: url(./fonts/fontisland.ttf);
+}
+
+@font-face {
+  font-family: 'Rurintania';
+  src: url(./fonts/rurintania.ttf);
+}
+
+@font-face {
   font-family: 'Hlobus';
-  src: url('./fonts/ofont.ru_Hlobus.ttf');
+  src: url(./fonts/ofont.ru_Hlobus.ttf);
 }
 
 @font-face {
   font-family: 'Roboto';
-  src: url('./fonts/ofont.ru_Roboto\ Flex.ttf');
+  src: url(./fonts/ofont.ru_Roboto\ Flex.ttf);
 }
 
 @font-face {
   font-family: 'FortuneC';
-  src: url('./fonts/ofont.ru_FortuneC.ttf');
+  src: url(./fonts/ofont.ru_FortuneC.ttf);
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 0px;
 }
 
 ::-webkit-scrollbar-track {

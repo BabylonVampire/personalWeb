@@ -36,6 +36,12 @@
     background-image: url("../../../../pics/layer_top.png");
 }
 
+.layer_between {
+    top: calc(var(--index) * 3);
+    z-index: 6;
+    background-image: url("../../../../pics/layer_between.png");
+}
+
 .title {
     display: flex;
     align-items: center;

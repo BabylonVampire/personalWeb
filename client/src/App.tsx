@@ -4,10 +4,11 @@ import Layout from './components/Layout/Layout.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
 
 const App: FC = () => {
+  
   return (
-    <div className= "App" >
+    <div className="App" >
       <Layout>
-        <MainPage/>
+        <MainPage />
       </Layout>
     </div>
   );

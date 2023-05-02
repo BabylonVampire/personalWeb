@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import './Head.scss';
 
 interface IHeadProps {
@@ -15,6 +15,7 @@ const Head: FC<IHeadProps> = ({ title }) => {
             <div className='layer layer_bottom' />
             <div className='layer layer_middle' />
             <div className='layer layer_top' />
+            {/* <div className="layer layer_between"/> */}
         </div>
     )
 }
