@@ -22,6 +22,22 @@
     font-family: fontisland;
 }
 
+.text_contaner_image_contaner {
+    position: absolute;
+    height: calc(var(--index) * 20);
+    width: calc(var(--index) * 20);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.imageBehindPolygon {
+    position: absolute;
+    background-attachment: local;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(../../../../../../pics/tale2.jpg);
+}
+
 .item_description {}
 
 .text_contaner {
@@ -30,6 +46,8 @@
     display: flex;
     flex-direction: column;
     width: calc(var(--index) * 20);
+    height: calc(var(--index) * 25);
+    justify-content: center;
 }
 
 .item__contaner {

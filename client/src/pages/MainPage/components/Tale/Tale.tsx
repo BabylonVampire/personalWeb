@@ -9,7 +9,7 @@ interface ITaleProps {
 const Tale: FC<ITaleProps> = () => {
   return (
     <div>
-
+      
     </div>
   )
 }

@@ -56,11 +56,12 @@ const MainPage = () => {
          <Head title={'Добро пожаловать!'} />
          <Body
             gallery_items={[
-               <Item title="Рыбак" description='asd' image="/src/pics/tale2.jpg" position={true} index={1} />,
-               <Item title="Башня" description='asd' image="/src/pics/tale2.jpg" position={false} index={2} />,
-               <Item title="Рыцарь" description='asd' image="/src/pics/tale2.jpg" position={true} index={3} />,
-               <Item title="asd" description='asd' image="/src/pics/tale2.jpg" position={false} index={4} />,
-               <Item title="asd" description='asd' image="/src/pics/tale2.jpg" position={true} index={5} />,
+               <Item title="Дракон" description='asd' image="/src/pics/cards/dragon.jpg" position={true} index={1} />,
+               <Item title="Море" description='asd' image="/src/pics/cards/sea.jpg" position={false} index={2} />,
+               <Item title="Герой" description='asd' image="/src/pics/cards/hero.jpg" position={true} index={3} />,
+               <Item title="Статуя" description='asd' image="/src/pics/cards/statue.jpg" position={false} index={4} />,
+               <Item title="Пустошь" description='asd' image="/src/pics/cards/wastes.jpg" position={true} index={5} />,
+               <Item title="Башня" description='asd' image="/src/pics/cards/tower.jpg" position={false} index={6} />,
             ]}
          />
       </div>
