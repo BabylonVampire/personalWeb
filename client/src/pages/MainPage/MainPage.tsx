@@ -24,7 +24,7 @@ const MainPage = () => {
       let images = gsap.utils.toArray<HTMLElement>('.item_image')
 
       items.forEach(item => {
-         gsap.fromTo(item, { opacity: 0, x: -40, y: 30 },
+         gsap.fromTo(item, { opacity: 0, x: (+item.id.slice(-1) % 2 === 0) ? 40: -40, y: 30 },
             {
                opacity: 1,
                x: 0,
