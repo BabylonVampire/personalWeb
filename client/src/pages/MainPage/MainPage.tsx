@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Head from './components/Head/Head.tsx';
 import Body from './components/Body/Body.tsx';
 import Item from './components/Body/components/Item/Item.tsx';
@@ -24,7 +24,7 @@ const MainPage = () => {
       let images = gsap.utils.toArray<HTMLElement>('.item_image')
 
       items.forEach(item => {
-         gsap.fromTo(item, { opacity: 0, x: (+item.id.slice(-1) % 2 === 0) ? 40: -40, y: 30 },
+         gsap.fromTo(item, { opacity: 0, x: ((+item.id.slice(-1) % 2 === 0) ? 1: -1) * 40, y: 30 },
             {
                opacity: 1,
                x: 0,
