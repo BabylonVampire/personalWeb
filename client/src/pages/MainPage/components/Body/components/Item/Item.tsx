@@ -5,13 +5,12 @@ interface IItemProps {
     title: string;
     description: string;
     image: string;
-    position: Boolean;
     index: number;
 }
 
-const Item: FC<IItemProps> = ({ title, description, image, position, index }) => {
+const Item: FC<IItemProps> = ({ title, description, image, index }) => {
     return (
-        <div className="item" style={{ flexDirection: position ? "row" : "row-reverse" }}>
+        <div className="item" style={{ flexDirection: index % 2 === 0 ? "row" : "row-reverse" }}>
             <div className={`item__contaner`} id={`item_image_${index}`}>
                 <div
                     className="item_image"

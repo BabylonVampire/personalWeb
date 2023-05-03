@@ -1,15 +1,18 @@
-import React, { FC } from 'react'
+import { FC } from 'react'
 
 interface ITaleProps {
-    type: string;
-    text: string;
-    image: string;
+  name: string;
+  content: {
+    type: string,
+    text: string,
+    image: string,
+  }[]
 }
 
-const Tale: FC<ITaleProps> = () => {
+const Tale: FC<ITaleProps> = ({name, content}) => {
   return (
     <div>
-      
+      <div className="name">{name}</div>
     </div>
   )
 }

@@ -18,7 +18,7 @@ const App: FC = () => {
                         {
                             tales.map((tale) => {
                                 return (
-                                    <Route path={`tale${tales.indexOf(tale)}`} element={<Tale type={tale.type} text={tale.text} image={tale.image} />}/>
+                                    <Route path={`tale${tales.indexOf(tale)}`} element={<Tale name={tale.name} content={tale.content} />}/>
                                 )
                             })
                         }
