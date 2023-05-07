@@ -25,12 +25,14 @@
 }
 
 .layer_middle {
+	filter: blur(1px);
     z-index: 3;
     transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
     background-image: url("../../../../pics/layer_middle.png");
 }
 
 .layer_top {
+	filter: blur(2px);
     z-index: 4;
     transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
     background-image: url("../../../../pics/layer_top.png");
@@ -49,7 +51,9 @@
     z-index: 2;
     transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
     font-size: calc(var(--index) * 3);
-    font-family: FortuneC;
+    // font-family: FortuneC;
+	// font-family: Lirus;
+	font-family: Hlobus;
     text-transform: uppercase;
     text-shadow: 0 0 20px #3299ac;
 }

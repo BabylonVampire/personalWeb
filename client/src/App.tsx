@@ -9,24 +9,26 @@ import Tale from './pages/MainPage/components/Tale/Tale.tsx';
 
 const App: FC = () => {
 
-    return (
-        <BrowserRouter>
-            <Layout>
-                <div className="App" >
-                    <Routes>
-                        <Route path="/" element={<MainPage/>}/>
-                        {
-                            tales.map((tale) => {
-                                return (
-                                    <Route path={`tale${tales.indexOf(tale)}`} element={<Tale name={tale.name} content={tale.content} />}/>
-                                )
-                            })
-                        }
-                    </Routes>
-                </div>
-            </Layout>
-        </BrowserRouter>
-    );
+	return (
+
+		<div className="App" >
+			<BrowserRouter>
+				<Layout>
+					<Routes>
+						<Route path="/" element={<MainPage />} />
+						{
+							tales.map((tale) => {
+								return (
+									<Route path={`tale${tales.indexOf(tale)}`} element={<Tale name={tale.name} content={tale.content} />} />
+								)
+							})
+						}
+					</Routes>
+				</Layout>
+			</BrowserRouter>
+			<div id="scene_manager" />
+		</div>
+	);
 }
 
 export default App;

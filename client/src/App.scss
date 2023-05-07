@@ -1,52 +1,101 @@
 * {
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
-  /* display: block; */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .App {
-  text-align: center;
+	text-align: center;
+}
+
+#scene_manager {
+	background-color: #f1f1f1;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 998;
+	height: 100vh;
+	width: 100%;
+}
+
+.blackout {
+	animation-name: blackout;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes blackout {
+
+	from {
+		// background-color: #f1f1f1;
+		opacity: 0;
+	}
+
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		// background-color: #f1f1f1;
+		opacity: 0;
+	}
 }
 
 @font-face {
-  font-family: 'fontisland';
-  src: url(./fonts/fontisland.ttf);
+	font-family: 'fontisland';
+	src: url(./fonts/fontisland.ttf);
 }
 
 @font-face {
-  font-family: 'Rurintania';
-  src: url(./fonts/rurintania.ttf);
+	font-family: 'Rurintania';
+	src: url(./fonts/rurintania.ttf);
 }
 
 @font-face {
-  font-family: 'Hlobus';
-  src: url(./fonts/ofont.ru_Hlobus.ttf);
+	font-family: 'Hlobus';
+	src: url(./fonts/ofont.ru_Hlobus.ttf);
 }
 
 @font-face {
-  font-family: 'Roboto';
-  src: url(./fonts/ofont.ru_Roboto\ Flex.ttf);
+	font-family: 'Roboto';
+	src: url(./fonts/ofont.ru_Roboto\ Flex.ttf);
 }
 
 @font-face {
-  font-family: 'FortuneC';
-  src: url(./fonts/ofont.ru_FortuneC.ttf);
+	font-family: 'FortuneC';
+	src: url(./fonts/ofont.ru_FortuneC.ttf);
+}
+
+@font-face {
+	font-family: 'Lirus';
+	src: url(./fonts/Liruss.ttf);
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+	width: 0px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+	background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background: rgb(214, 214, 214);
+	border-radius: 4px;
+	background: rgb(214, 214, 214);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(137, 137, 137);
+	background: rgb(137, 137, 137);
 }
