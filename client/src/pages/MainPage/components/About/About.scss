@@ -1,52 +1,55 @@
+.about,
+.about__bug__container,
+.about__wrapper,
+.about__frame {
+	width: 100%;
+}
+
+.about,
+.about__bug__container,
+.about__wrapper {
+	height: 100vh;
+
+}
+
 .about {
 	position: relative;
-    height: 100vh;
-	width: 100%;
-    z-index: 4;
-    background-color: #111111;
+	z-index: 4;
+	background-color: #111111;
 }
 
 .about__bug__container {
-	width: 100%;
-	height: 100vh;
 	position: absolute;
 	z-index: 5;
 }
 
 .about__wrapper {
-	width: 100%;
-	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 .about__contaner {
-    height: calc(var(--index) * 20);
-    width: calc(var(--index) * 20);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    color: #fff;
-    border-radius: 8px;
-    font-size: calc(var(--index));
-    font-family: FortuneC;
+	height: calc(var(--index) * 20);
+	width: calc(var(--index) * 20);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	color: #fff;
+	border-radius: 8px;
+	font-size: calc(var(--index));
+	font-family: FortuneC;
 }
 
 .about__title {
 	font-size: calc(var(--index) * 2);
-    font-family: fontisland;
+	font-family: fontisland;
 }
 
 .about__frame {
-	width: 100%;
 	height: 15%;
 	background-image: url(../../../../pics/about_frame.png);
 	background-size: cover;
 	filter: invert(1);
-}
-
-.about__description {
-
 }

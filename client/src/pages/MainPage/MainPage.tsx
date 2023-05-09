@@ -13,6 +13,7 @@ const MainPage = () => {
 		let items = gsap.utils.toArray<HTMLElement>('.item__contaner')
 		let images = gsap.utils.toArray<HTMLElement>('.item_image')
 		let images_back = gsap.utils.toArray<HTMLElement>('.imageBehindPolygon')
+		let text_content = gsap.utils.toArray<HTMLElement>('.text__content')
 
 		gsap.registerPlugin(ScrollTrigger)
 		gsap.fromTo('.Head', { opacity: 1 },
@@ -68,11 +69,24 @@ const MainPage = () => {
 				}
 			})
 		})
+
+		text_content.forEach(content => {
+			gsap.fromTo(content, { opacity: 0 }, {
+				opacity: 1,
+				duration: 1,
+				yoyo: true,
+				scrollTrigger: {
+					start: '-450',
+					trigger: content,
+					toggleActions: 'play none none reverse'
+				}
+			})
+		})
 	}, [])
 	return (
 		<div className='mainPage'>
 			<Head title={'Добро пожаловать!'} />
-			<About title='Что это за место?' description='asd'/>
+			<About title='Что это за место?' description='asd' />
 			<Body gallery_items={tales} />
 		</div>
 	)

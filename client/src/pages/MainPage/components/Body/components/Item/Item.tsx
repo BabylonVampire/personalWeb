@@ -11,22 +11,33 @@ interface IItemProps {
 
 const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) => {
 
-	const [className, setClassName] = useState(`item__contaner`);
-	const [mouseOver, setMouseOver] = useState(false);
+	const [itemImageClassName, setItemImageClassName] = useState(`item__contaner`);
+	const [mouseOverItemImage, setMouseOverItemImage] = useState(false);
+
+	const [textContentClassName, setTextContentClassName] = useState(`text__content`);
+	const [mouseOverTextContent, setMouseOverTextContent] = useState(false);
 
 	const handleZoomIn = () => {
-		setClassName(`item__contaner zoom_in`)
+		setItemImageClassName(`item__contaner zoom_in`)
 		setTimeout(() => {
-			setClassName(`item__contaner`)
+			setItemImageClassName(`item__contaner`)
 		}, 1000)
 	}
 
 	const handleGlowUp = () => {
-		setClassName(`item__contaner glow_in`)
+		setItemImageClassName(`item__contaner glow_in`)
 	}
 
 	const handleGlowDown = () => {
-		setClassName(`item__contaner glow_down`)
+		setItemImageClassName(`item__contaner glow_down`)
+	}
+
+	const handleScrollDown = () => {
+		setTextContentClassName(`text__content scrollDown`)
+	}
+
+	const handleScrollUp = () => {
+		setTextContentClassName(`text__content scrollUp`)
 	}
 
 	return (
@@ -42,7 +53,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 				/>
 			</div>
 			<div
-				className={className}
+				className={itemImageClassName}
 				id={`item_image_${index}`}
 				onClick={
 					() => {
@@ -57,18 +68,18 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 				onMouseEnter={
 					() => {
 						handleGlowUp()
-						setMouseOver(true)
+						setMouseOverItemImage(true)
 					}
 				}
 				onMouseLeave={
 					() => {
 						handleGlowDown()
-						setMouseOver(false)
+						setMouseOverItemImage(false)
 					}
 				}
 				style={{
-					filter: `grayscale(${mouseOver ? 0 : 1})`,
-					boxShadow: mouseOver ? `0px 0px 16px 14px #fff` : `0px 0px 20px 20px #000`
+					filter: `grayscale(${mouseOverItemImage ? 0 : 1})`,
+					boxShadow: mouseOverItemImage ? `0px 0px 16px 14px #fff` : `0px 0px 20px 20px #000`
 				}}
 			>
 				<div
@@ -77,10 +88,28 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 				/>
 			</div>
 			<div className="text_contaner">
-				<div className="text__content">
+				<div
+					className={textContentClassName}
+					onMouseEnter={
+						() => {
+							handleScrollDown()
+							setMouseOverTextContent(true)
+						}
+					}
+					onMouseLeave={
+						() => {
+							handleScrollUp()
+							setMouseOverTextContent(false)
+						}
+					}
+					style={{
+						top: `${mouseOverTextContent ? '-100%' : '0'}`
+					}}
+				>
 					<div className="item_title">{title}</div>
 					<div className="item_description">{description}</div>
 				</div>
+				<div className="text__frame"/>
 			</div>
 		</div >
 	);

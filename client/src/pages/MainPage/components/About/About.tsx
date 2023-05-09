@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 import './About.scss';
-import spawnBugs from 'fairy-anims/src/index';
+import spawnBug from 'fairy-anims/src/Bugs';
 
 interface IAboutProps {
 	title: string;
@@ -10,7 +10,7 @@ interface IAboutProps {
 const About: FC<IAboutProps> = ({ description, title }) => {
 
 	useEffect(() => {
-		spawnBugs(100, 'about__bug__container')
+		spawnBug(50, 'about__bug__container')
 	}, [])
 
 	return (

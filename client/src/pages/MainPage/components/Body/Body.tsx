@@ -2,7 +2,6 @@ import { FC, useEffect } from 'react';
 import "./Body.scss";
 import "../../../../animations/appiaranceFromCorner/appiaranceFromCorner.scss";
 import Item from './components/Item/Item';
-import spawnBugs from 'fairy-anims/src/index';
 
 interface IBodyProps {
 	gallery_items: {
@@ -23,13 +22,8 @@ interface IBodyProps {
 
 const Body: FC<IBodyProps> = ({ gallery_items }) => {
 
-	// useEffect(() => {
-	// 	spawnBugs(100, 'body__bug__container')
-	// }, [])
-
 	return (
 		<div className='body'>
-			{/* <div className="body__bug__container"/> */}
 			<div className="gallery">
 				{
 					gallery_items.map((item) => {

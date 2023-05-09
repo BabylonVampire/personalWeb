@@ -1,59 +1,57 @@
 :root {
-    --index: calc(1vh + 1vw);
+	--index: calc(1vh + 1vw);
 }
 
 .Head {
-    min-height: 100vh;
-    width: 100%;
-    background-color: #070707;
-    color: #fff;
+	min-height: 100vh;
+	width: 100%;
+	background-color: #070707;
+	color: #fff;
 }
 
 .layer {
-    position: absolute;
-    width: 100%;
-    min-height: 100%;
-    background-size: cover;
-    background-position: center center;
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+	background-size: cover;
+	background-position: center center;
 }
 
 .layer_bottom {
-    z-index: 1;
-    transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-    background-image: url("../../../../pics/layer_bottom.png");
+	z-index: 1;
+	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
+	background-image: url("../../../../pics/layer_bottom.png");
 
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
+	font-size: calc(var(--index) * 3);
+	font-family: Hlobus;
+	text-transform: uppercase;
+	text-shadow: 0 0 20px #3299ac;
 }
 
 .layer_middle {
 	filter: blur(1px);
-    z-index: 3;
-    transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-    background-image: url("../../../../pics/layer_middle.png");
+	z-index: 3;
+	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
+	background-image: url("../../../../pics/layer_middle.png");
 }
 
 .layer_top {
 	filter: blur(2px);
-    z-index: 4;
-    transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
-    background-image: url("../../../../pics/layer_top.png");
+	z-index: 4;
+	transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
+	background-image: url("../../../../pics/layer_top.png");
 }
 
 .layer_between {
-    top: calc(var(--index) * 3);
-    z-index: 6;
-    background-image: url("../../../../pics/layer_between.png");
-}
-
-.title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    transform: translate3d(0, calc(var(--scrollTop) / 2.2), 0);
-    font-size: calc(var(--index) * 3);
-    // font-family: FortuneC;
-	// font-family: Lirus;
-	font-family: Hlobus;
-    text-transform: uppercase;
-    text-shadow: 0 0 20px #3299ac;
+	top: calc(var(--index) * 3);
+	z-index: 6;
+	background-image: url("../../../../pics/layer_between.png");
 }
