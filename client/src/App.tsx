@@ -1,6 +1,5 @@
 import { FC } from 'react';
 import './App.scss';
-
 import Layout from './components/Layout/Layout.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';

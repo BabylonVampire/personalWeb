@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Item.scss';
 
 interface IItemProps {
@@ -40,6 +41,8 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 		setTextContentClassName(`text__content scrollUp`)
 	}
 
+	const navigate = useNavigate();
+
 	return (
 		<div
 			className="item"
@@ -52,41 +55,44 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 					style={{ backgroundImage: `url(${backImage})` }}
 				/>
 			</div>
-			<div
-				className={itemImageClassName}
-				id={`item_image_${index}`}
-				onClick={
-					() => {
-						handleZoomIn()
-						let el = document.getElementById('scene_manager')
-						el?.classList.add('blackout');
-						setTimeout(() => {
-							el?.classList.remove('blackout');
-						}, 2000)
-					}
-				}
-				onMouseEnter={
-					() => {
-						handleGlowUp()
-						setMouseOverItemImage(true)
-					}
-				}
-				onMouseLeave={
-					() => {
-						handleGlowDown()
-						setMouseOverItemImage(false)
-					}
-				}
-				style={{
-					filter: `grayscale(${mouseOverItemImage ? 0 : 1})`,
-					boxShadow: mouseOverItemImage ? `0px 0px 16px 14px #fff` : `0px 0px 20px 20px #000`
-				}}
-			>
+			<Link to="/">
 				<div
-					className="item_image"
-					style={{ backgroundImage: `url(${image})` }}
-				/>
-			</div>
+					className={itemImageClassName}
+					id={`item_image_${index}`}
+					onClick={
+						() => {
+							handleZoomIn()
+							let el = document.getElementById('scene_manager')
+							el?.classList.add('blackout');
+							setTimeout(() => {
+								navigate("/sea");
+								el?.classList.remove('blackout');
+							}, 1000)
+						}
+					}
+					onMouseEnter={
+						() => {
+							handleGlowUp()
+							setMouseOverItemImage(true)
+						}
+					}
+					onMouseLeave={
+						() => {
+							handleGlowDown()
+							setMouseOverItemImage(false)
+						}
+					}
+					style={{
+						filter: `grayscale(${mouseOverItemImage ? 0 : 1})`,
+						boxShadow: mouseOverItemImage ? `0px 0px 16px 14px #fff` : `0px 0px 20px 20px #000`
+					}}
+				>
+					<div
+						className="item_image"
+						style={{ backgroundImage: `url(${image})` }}
+					/>
+				</div>
+			</Link>
 			<div className="text_contaner">
 				<div
 					className={textContentClassName}
@@ -109,7 +115,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 					<div className="item_title">{title}</div>
 					<div className="item_description">{description}</div>
 				</div>
-				<div className="text__frame"/>
+				<div className="text__frame" />
 			</div>
 		</div >
 	);
