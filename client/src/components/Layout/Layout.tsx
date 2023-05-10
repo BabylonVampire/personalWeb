@@ -9,11 +9,10 @@ interface ILayoutProps {
 
 const Layout: FC<ILayoutProps> = ({ children }) => (
     <div className='layout'>
-        {/* <Header anchors={[{text: 'a', place: ''}, {text: 'b', place: ''}]}/> */}
         <div className='contaner'>
             {children}
         </div>
-        <Footer email="" phone="" logo=""/>
+        <Footer email="asd" phone="asd" people={['a', 'a', 'a', 'a']}/>
     </div>
 );
 

@@ -1,4 +1,4 @@
-import { FC, useEffect } from 'react';
+import { FC } from 'react';
 import "./Body.scss";
 import "../../../../animations/appiaranceFromCorner/appiaranceFromCorner.scss";
 import Item from './components/Item/Item';
