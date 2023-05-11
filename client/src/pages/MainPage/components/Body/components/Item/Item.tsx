@@ -8,9 +8,10 @@ interface IItemProps {
 	image: string;
 	backImage: string;
 	index: number;
+	link: string;
 }
 
-const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) => {
+const Item: FC<IItemProps> = ({ title, description, image, backImage, index, link }) => {
 
 	const [itemImageClassName, setItemImageClassName] = useState(`item__contaner`);
 	const [mouseOverItemImage, setMouseOverItemImage] = useState(false);
@@ -65,7 +66,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index }) =
 							let el = document.getElementById('scene_manager')
 							el?.classList.add('blackout');
 							setTimeout(() => {
-								navigate("/sea");
+								navigate(link);
 								el?.classList.remove('blackout');
 							}, 1000)
 						}

@@ -4,7 +4,7 @@ import Layout from './components/Layout/Layout.tsx';
 import MainPage from './pages/MainPage/MainPage.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import tales from './data/tales/tales.ts';
-import Tale from './pages/MainPage/components/Tale/Tale.tsx';
+import Tale from './components/Tale/Tale.tsx';
 
 const App: FC = () => {
 
@@ -18,7 +18,7 @@ const App: FC = () => {
 						{
 							tales.map((tale) => {
 								return (
-									<Route path={`tale${tales.indexOf(tale)}`} element={<Tale name={tale.name} content={tale.content} />} />
+									<Route path={tale.link} element={<Tale tale={tale} />} />
 								)
 							})
 						}

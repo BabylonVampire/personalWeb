@@ -11,6 +11,7 @@ interface IBodyProps {
 			image: string;
 			backImage: string;
 		}
+		link: string;
 		name: string;
 		content: {
 			type: string,
@@ -29,6 +30,7 @@ const Body: FC<IBodyProps> = ({ gallery_items }) => {
 					gallery_items.map((item) => {
 						return (
 							<Item
+								link={item.link}
 								title={item.preview.title}
 								description={item.preview.description}
 								image={item.preview.image}

@@ -1,5 +1,4 @@
 import './Layout.scss';
-import Header from './components/Header/Header.tsx';
 import Footer from './components/Footer/Footer.tsx';
 import { FC } from 'react';
 

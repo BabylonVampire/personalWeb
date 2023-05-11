@@ -6,6 +6,7 @@ interface tale {
 		backImage: string;
     }
     name: string;
+	link: string;
     content: {
         type: string,
         text: string,
@@ -21,7 +22,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/dragon.jpg',
 			backImage: '/src/pics/about.png',
         },
-        name: 'Дракон',
+        name: 'Dragon',
+		link: '/Dragon',
         content: [
             {
                 type: '',
@@ -37,7 +39,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/sea.jpg',
 			backImage: '/src/pics/layer_bottom.png',
         },
-        name: 'Море',
+        name: 'Sea',
+		link: '/Sea',
         content: [
             {
                 type: '',
@@ -53,7 +56,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/tower.jpg',
 			backImage: '/src/pics/layer_bottom.png',
         },
-        name: 'Башня',
+        name: 'Tower',
+		link: '/Tower',
         content: [
             {
                 type: '',
@@ -69,7 +73,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/statue.jpg',
 			backImage: '/src/pics/layer_bottom.png',
         },
-        name: 'Статуя',
+        name: 'Statue',
+		link: '/Statue',
         content: [
             {
                 type: '',
@@ -85,7 +90,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/wastes.jpg',
 			backImage: '/src/pics/layer_bottom.png',
         },
-        name: 'Пустошь',
+        name: 'Wasteland',
+		link: '/Wasteland',
         content: [
             {
                 type: '',
@@ -101,7 +107,8 @@ const tales: tale[] = [
             image: '/src/pics/cards/hero.jpg',
 			backImage: '/src/pics/layer_bottom.png',
         },
-        name: 'Герой',
+        name: 'Hero',
+		link: '/Hero',
         content: [
             {
                 type: '',
