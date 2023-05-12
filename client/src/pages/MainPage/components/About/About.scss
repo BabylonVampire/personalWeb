@@ -19,6 +19,7 @@
 }
 
 .about__bug__container {
+	overflow: hidden;
 	position: absolute;
 	z-index: 5;
 }
@@ -29,7 +30,7 @@
 	align-items: center;
 }
 
-.about__contaner {
+.about__container {
 	height: calc(var(--index) * 20);
 	width: calc(var(--index) * 20);
 	display: flex;

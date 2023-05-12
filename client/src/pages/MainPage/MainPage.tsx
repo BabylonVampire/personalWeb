@@ -10,7 +10,7 @@ const MainPage = () => {
 
 	useEffect(() => {
 
-		let items = gsap.utils.toArray<HTMLElement>('.item__contaner')
+		let items = gsap.utils.toArray<HTMLElement>('.item__container')
 		let images = gsap.utils.toArray<HTMLElement>('.item_image')
 		let images_back = gsap.utils.toArray<HTMLElement>('.imageBehindPolygon')
 		let text_content = gsap.utils.toArray<HTMLElement>('.text__content')

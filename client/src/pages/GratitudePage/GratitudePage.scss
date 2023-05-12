@@ -1,0 +1,21 @@
+.gratitudePage {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background-image: url(../../pics/gratitudeBack.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.runningLines {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.runningLines > * {
+	font-weight: 600;
+	font-family: 'Courier New', Courier, monospace;
+}

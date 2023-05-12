@@ -1,8 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import './Sea.scss';
 
 interface ISeaProps {
-	content: {
+	tale: {
 		preview: {
 			title: string;
 			description: string;
@@ -19,12 +19,37 @@ interface ISeaProps {
 	}
 }
 
-const Sea: FC<ISeaProps> = ({content}) => {
-  return (
-	<div className='sea'>
+const Sea: FC<ISeaProps> = ({ tale }) => {
 
-	</div>
-  )
+	const taleParse = (
+		content: {
+			type: string,
+			text: string,
+			image: string,
+		}[]
+	): ReactNode => {
+		content.map((item) => {
+			switch (item.type) {
+				case 'title':
+					return(<></>);
+				case 'image':
+					return(<></>);
+				case 'text':
+					return(<></>);
+				default:
+					return(<></>);
+			}
+		})
+		return;
+	}
+
+	return (
+		<div className='sea'>
+			{
+				taleParse(tale.content)
+			}
+		</div>
+	)
 }
 
 export default Sea;

@@ -13,25 +13,25 @@ interface IItemProps {
 
 const Item: FC<IItemProps> = ({ title, description, image, backImage, index, link }) => {
 
-	const [itemImageClassName, setItemImageClassName] = useState(`item__contaner`);
+	const [itemImageClassName, setItemImageClassName] = useState(`item__container`);
 	const [mouseOverItemImage, setMouseOverItemImage] = useState(false);
 
 	const [textContentClassName, setTextContentClassName] = useState(`text__content`);
 	const [mouseOverTextContent, setMouseOverTextContent] = useState(false);
 
 	const handleZoomIn = () => {
-		setItemImageClassName(`item__contaner zoom_in`)
+		setItemImageClassName(`item__container zoom_in`)
 		setTimeout(() => {
-			setItemImageClassName(`item__contaner`)
+			setItemImageClassName(`item__container`)
 		}, 1000)
 	}
 
 	const handleGlowUp = () => {
-		setItemImageClassName(`item__contaner glow_in`)
+		setItemImageClassName(`item__container glow_in`)
 	}
 
 	const handleGlowDown = () => {
-		setItemImageClassName(`item__contaner glow_down`)
+		setItemImageClassName(`item__container glow_down`)
 	}
 
 	const handleScrollDown = () => {
@@ -49,7 +49,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 			className="item"
 			style={{ flexDirection: index % 2 === 1 ? "row" : "row-reverse" }}
 		>
-			<div className="text_contaner_image_contaner">
+			<div className="text_container_image_container">
 				<div
 					className="imageBehindPolygon"
 					id={`imageBehindPolygon${index}`}
@@ -94,7 +94,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 					/>
 				</div>
 			</Link>
-			<div className="text_contaner">
+			<div className="text_container">
 				<div
 					className={textContentClassName}
 					onMouseEnter={

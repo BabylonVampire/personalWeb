@@ -22,7 +22,7 @@
 	font-family: fontisland;
 }
 
-.text_contaner_image_contaner {
+.text_container_image_container {
 	z-index: -1;
 	position: absolute;
 	height: calc(var(--index) * 20);
@@ -39,7 +39,7 @@
 	height: 100%;
 }
 
-.text_contaner {
+.text_container {
 	background-color: #111111;
 	margin: calc(var(--index));
 	font-size: calc(var(--index) * 2);
@@ -49,7 +49,7 @@
 	overflow: hidden;
 }
 
-.item__contaner {
+.item__container {
 	overflow: hidden;
 	height: calc(var(--index) * 25);
 	width: calc(var(--index) * 15);

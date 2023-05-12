@@ -29,7 +29,7 @@ const Tale: FC<ITaleProps> = ({ tale }) => {
 	const fairyDefenition = (name: string) => {
 		switch (name) {
 			case 'Sea':
-				return (<Sea content={tale}/>);
+				return (<Sea tale={tale}/>);
 			case 'Dragon':
 				return;
 			case 'Hero':
