@@ -3,7 +3,7 @@ import './Sea.scss';
 import Wave from '../../animations/Wave/Wave';
 import setSky from 'fairy-anims/src/Stars';
 import TaleTitle from '../../components/Tale/TaleTitle/TaleTitle';
-import { ITaleProps } from '../../components/Tale/ITaleProps.interface';
+import { ITaleProps } from '../../types/ITaleProps.interface';
 import TaleText from '../../components/Tale/TaleText/TaleText';
 
 interface ISeaProps {
@@ -32,7 +32,8 @@ const Sea: FC<ISeaProps> = ({ tale }) => {
 							case 'image':
 								return (<></>);
 							default:
-								return (<></>);
+								console.error("[!] Invalid 'type' value, use only 'title', 'text', 'image'")
+								break;
 						}
 					})
 				}

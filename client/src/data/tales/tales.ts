@@ -1,4 +1,4 @@
-import { ITaleProps } from "../../components/Tale/ITaleProps.interface";
+import { ITaleProps } from "../../types/ITaleProps.interface";
 
 const tales: ITaleProps[] = [
 	{
@@ -38,7 +38,7 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'right'
+					position: 'center'
 				}
 			},
 			{

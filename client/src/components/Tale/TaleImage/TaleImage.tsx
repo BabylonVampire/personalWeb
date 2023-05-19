@@ -1,8 +1,27 @@
-import React from 'react'
+import { FC, useEffect } from 'react'
+import { ITaleComponentsProps } from '../TaleComponents.interfaces';
+import setAppearanceDirection from '../utils/setAppearanceDirection';
+import optionsCheck from '../utils/optionsCheck';
+import setMargin from '../utils/setMargin';
 
-function TaleImage() {
+const TaleImage: FC<ITaleComponentsProps> = ({ text, className, options }) => {
+
+	optionsCheck(options);
+
+	useEffect(() => {
+		setAppearanceDirection(className, options);
+	}, [])
+	
+	let margin = setMargin(options.position);
+
 	return (
-		<div>TaleImage</div>
+		<div
+			className={`tale_image ${className}`}
+			style={{ 
+				margin: margin,
+				backgroundImage: `url(${text})` 
+			}}
+		/>
 	)
 }
 

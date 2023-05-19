@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import "./Body.scss";
 import Item from './components/Item/Item';
-import { ITaleProps } from '../../../../components/Tale/ITaleProps.interface';
+import { ITaleProps } from '../../../../types/ITaleProps.interface';
 
 interface IBodyProps {
 	gallery_items: ITaleProps[]
