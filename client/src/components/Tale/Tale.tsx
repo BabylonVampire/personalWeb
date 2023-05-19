@@ -26,7 +26,7 @@ const Tale: FC<ITaleProps> = ({ tale }) => {
 	}, [])
 	
 
-	const fairyDefenition = (name: string) => {
+	const fairyDefinition = (name: string) => {
 		switch (name) {
 			case 'Sea':
 				return (<Sea tale={tale}/>);
@@ -46,7 +46,7 @@ const Tale: FC<ITaleProps> = ({ tale }) => {
 	return (
 		<div className='tale'>
 			{
-				fairyDefenition(tale.name)
+				fairyDefinition(tale.name)
 			}
 		</div>
 	)

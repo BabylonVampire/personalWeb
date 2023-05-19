@@ -1,53 +1,43 @@
-import React, { FC, ReactNode } from 'react';
+import { FC, useEffect } from 'react';
 import './Sea.scss';
+import Wave from '../../animations/Wave/Wave';
+import setSky from 'fairy-anims/src/Stars';
+import TaleTitle from '../../components/Tale/TaleTitle/TaleTitle';
+import { ITaleProps } from '../../components/Tale/ITaleProps.interface';
+import TaleText from '../../components/Tale/TaleText/TaleText';
 
 interface ISeaProps {
-	tale: {
-		preview: {
-			title: string;
-			description: string;
-			image: string;
-			backImage: string;
-		}
-		name: string;
-		link: string;
-		content: {
-			type: string,
-			text: string,
-			image: string,
-		}[]
-	}
+	tale: ITaleProps;
 }
 
 const Sea: FC<ISeaProps> = ({ tale }) => {
 
-	const taleParse = (
-		content: {
-			type: string,
-			text: string,
-			image: string,
-		}[]
-	): ReactNode => {
-		content.map((item) => {
-			switch (item.type) {
-				case 'title':
-					return(<></>);
-				case 'image':
-					return(<></>);
-				case 'text':
-					return(<></>);
-				default:
-					return(<></>);
-			}
-		})
-		return;
-	}
+	useEffect(() => {
+		setSky(100, 'starContainer')
+	}, [])
 
 	return (
 		<div className='sea'>
-			{
-				taleParse(tale.content)
-			}
+			<div className="sea_hero" />
+			<div className="starContainer" />
+			<Wave />
+			<div className="seaTaleContainer">
+				{
+					tale.content.map((item) => {
+						switch (item.type) {
+							case 'title':
+								return (<TaleTitle className={item.className} options={item.options} text={item.text} />);
+							case 'text':
+								return (<TaleText className={item.className} options={item.options} text={item.text} />);
+							case 'image':
+								return (<></>);
+							default:
+								return (<></>);
+						}
+					})
+				}
+				<div className="epilogue" />
+			</div>
 		</div>
 	)
 }

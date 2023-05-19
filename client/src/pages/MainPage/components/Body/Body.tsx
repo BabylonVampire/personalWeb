@@ -1,24 +1,10 @@
 import { FC } from 'react';
 import "./Body.scss";
-import "../../../../animations/appiaranceFromCorner/appiaranceFromCorner.scss";
 import Item from './components/Item/Item';
+import { ITaleProps } from '../../../../components/Tale/ITaleProps.interface';
 
 interface IBodyProps {
-	gallery_items: {
-		preview: {
-			title: string;
-			description: string;
-			image: string;
-			backImage: string;
-		}
-		link: string;
-		name: string;
-		content: {
-			type: string,
-			text: string,
-			image: string,
-		}[]
-	}[]
+	gallery_items: ITaleProps[]
 }
 
 const Body: FC<IBodyProps> = ({ gallery_items }) => {

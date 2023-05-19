@@ -1,36 +1,36 @@
 import runningText from 'fairy-anims/src/Lines'
 import { FC, useEffect } from 'react'
 import './GratitudePage.scss'
+import setSky from 'fairy-anims/src/Stars';
+import { ILinesOptions } from 'fairy-anims/src/Lines/lines-options.interface';
 
 interface IGratitudePageProps {
 	lines: string[];
 }
 
-interface IOptions {
-	shadow: boolean;
-	repeat: boolean;
-	speedRange: [number, number];
-	fontSizeRange: [number, number];
-	color: string;
-}
 
-const GratitudePage: FC<IGratitudePageProps> = ({lines}) => {
+const GratitudePage: FC<IGratitudePageProps> = ({ lines }) => {
 
-	const options: IOptions = {
+	const options: ILinesOptions = {
 		shadow: false,
 		repeat: true,
 		color: '#fff',
-		fontSizeRange: [1.5, 3],
-		speedRange: [3000, 7000]
+		fontSizeRange: [2, 2],
+		speedRange: [3000, 4000],
+		lineDirection: 'horizontal'
 	}
 
 	useEffect(() => {
-		runningText(lines, 20, 'runningLines', options);
+		runningText(lines, 3, 'runningLines', options);
+		setSky(500, 'gratitudePage');
 	}, [])
-	
+
 	return (
-		<div className='gratitudePage'>
-			<div className="runningLines"/>
+		<div className='gratitudePage' >
+			<div className="runningLines" />
+			<div className="gratitudePage_container" >
+				<div className="gratitudePage_image" />
+			</div>
 		</div>
 	)
 }

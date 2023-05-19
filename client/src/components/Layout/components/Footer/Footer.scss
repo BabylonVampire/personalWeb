@@ -1,28 +1,29 @@
 .Footer {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-evenly;
-    background-color: rgb(50, 50, 50);
-    color: #fff;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-evenly;
+	background-color: rgb(50, 50, 50);
+	color: #fff;
 	font-family: FortuneC;
 	line-height: calc(var(--index) * 1.5);
-    margin-top: calc(var(--index) * 2);
-    font-size: calc(var(--index));
+	padding: calc(var(--index) * 2) 0;
+	font-size: calc(var(--index));
 }
 
 .Footer>* {
-    flex: 1;
+	flex: 1;
 }
 
-.people_container, .contacts_conteiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.people_container,
+.contacts_conteiner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .contacts {
-    flex-direction: column;
-    display: flex;
+	flex-direction: column;
+	display: flex;
 }

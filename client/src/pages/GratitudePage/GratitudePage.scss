@@ -1,21 +1,52 @@
 .gratitudePage {
+	z-index: 1;
 	width: 100%;
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-	background-image: url(../../pics/gratitudeBack.png);
-	background-size: cover;
-	background-position: center center;
+	background-color: #000;
+}
+
+.line {
+	font-family: arlecino;
+}
+
+.gratitudePage_container {
+	z-index: 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.gratitudePage_image {
+	width: 60vh;
+    height: 90vh;
+	position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(/src/pics/gratitude.png);
+	filter: sepia(1) grayscale(0.3); // тест
+	animation: image ease-in-out 10s forwards infinite;
 }
 
 .runningLines {
+	z-index: 10;
 	width: 100%;
 	height: 100vh;
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 }
 
-.runningLines > * {
-	font-weight: 600;
-	font-family: 'Courier New', Courier, monospace;
+@-webkit-keyframes image {
+	from {
+		top: 0;
+	}
+	50% {
+		top: 20px
+	}
+	to {
+		top: 0px;
+	}
 }
