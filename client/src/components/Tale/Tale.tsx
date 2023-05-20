@@ -1,35 +1,22 @@
-import React, { FC, useEffect } from 'react'
+import { FC, useEffect } from 'react'
 import Sea from '../../pages/SeaPage/Sea';
+import { ITaleProps } from '../../types/ITaleProps.interface';
 
-interface ITaleProps {
-	tale: {
-		preview: {
-			title: string;
-			description: string;
-			image: string;
-			backImage: string;
-		}
-		name: string;
-		link: string;
-		content: {
-			type: string,
-			text: string,
-			image: string,
-		}[]
-	}
+interface ITale {
+	tale: ITaleProps;
 }
 
-const Tale: FC<ITaleProps> = ({ tale }) => {
+const Tale: FC<ITale> = ({ tale }) => {
 
 	useEffect(() => {
 		scroll(0, 0);
 	}, [])
-	
+
 
 	const fairyDefinition = (name: string) => {
 		switch (name) {
 			case 'Sea':
-				return (<Sea tale={tale}/>);
+				return (<Sea tale={tale} />);
 			case 'Dragon':
 				return;
 			case 'Hero':

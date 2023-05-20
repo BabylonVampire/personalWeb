@@ -1,8 +1,9 @@
 import { FC, useEffect } from 'react'
-import { ITaleComponentsProps } from '../TaleComponents.interfaces';
+import { ITaleComponentsProps } from '../../../types/TaleComponents.interfaces';
 import setAppearanceDirection from '../utils/setAppearanceDirection';
 import optionsCheck from '../utils/optionsCheck';
 import setMargin from '../utils/setMargin';
+import './TaleImage.scss';
 
 const TaleImage: FC<ITaleComponentsProps> = ({ text, className, options }) => {
 

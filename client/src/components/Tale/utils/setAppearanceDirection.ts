@@ -1,4 +1,4 @@
-import { ITaleComponentsOptions } from "../TaleComponents.interfaces";
+import { ITaleComponentsOptions } from "../../../types/TaleComponents.interfaces";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/src/ScrollTrigger";
 

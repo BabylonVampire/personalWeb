@@ -5,6 +5,7 @@ import setSky from 'fairy-anims/src/Stars';
 import TaleTitle from '../../components/Tale/TaleTitle/TaleTitle';
 import { ITaleProps } from '../../types/ITaleProps.interface';
 import TaleText from '../../components/Tale/TaleText/TaleText';
+import TaleImage from '../../components/Tale/TaleImage/TaleImage';
 
 interface ISeaProps {
 	tale: ITaleProps;
@@ -30,7 +31,7 @@ const Sea: FC<ISeaProps> = ({ tale }) => {
 							case 'text':
 								return (<TaleText className={item.className} options={item.options} text={item.text} />);
 							case 'image':
-								return (<></>);
+								return (<TaleImage className={item.className} options={item.options} text={item.text}/>);
 							default:
 								console.error("[!] Invalid 'type' value, use only 'title', 'text', 'image'")
 								break;

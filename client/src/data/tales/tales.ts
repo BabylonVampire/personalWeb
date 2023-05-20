@@ -82,6 +82,16 @@ const tales: ITaleProps[] = [
 				}
 			},
 			{
+				className: 'eyes',
+				type: 'image',
+				text: 'src/pics/gifs/eyes.gif',
+				image: '',
+				options: {
+					appearanceDirection: 'top',
+					position: 'center'
+				}
+			},
+			{
 				className: 'paragraph5',
 				type: 'text',
 				text: 'Ноги замерзли от ночных вод, а руки устали от работы, огонек дома, являвшийся последним маяком, и вовсе пропал из виду, а лодка, что так долго служила спасением от морских пучин, тихо поскрипывала, терпя редкие удары волн, будучи забытой на далеком берегу.',
@@ -90,7 +100,7 @@ const tales: ITaleProps[] = [
 					appearanceDirection: 'right',
 					position: 'right'
 				}
-			}
+			},
 		]
 	},
 	{
