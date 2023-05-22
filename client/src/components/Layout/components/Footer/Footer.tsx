@@ -12,7 +12,7 @@ const Footer: FC<IFooterProps> = ({ people, email, phone }) => (
 	<div className='Footer'>
 		<div className="people_container">
 			<div className="people_title">
-				причатные
+				причастные
 			</div>
 			<Divider />
 			<div className="people">

@@ -1,0 +1,45 @@
+.dragon {
+	animation: appearance 1.5s forwards ease-in-out;
+}
+
+.dragon_hero {
+	background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(185,185,185,1) 100%);
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+.sun {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: -50vh;
+	left: -30vw;
+	background: radial-gradient(circle, rgb(255, 230, 28) 20%, rgba(17, 17, 17, 0) 50%);
+}
+
+.hero_back {
+	filter: sepia(0.4) brightness(0.8);
+	background-image: url(../../pics/use_later/cave.png);
+	background-size: cover;
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+}
+
+.dragonTaleContainer {
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+
+@-webkit-keyframes appearance {
+	from {
+		background-color: #fff;
+	}
+
+	to {
+		background-color: #111111;
+	}
+}

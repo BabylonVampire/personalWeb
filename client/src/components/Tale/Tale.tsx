@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react'
 import Sea from '../../pages/SeaPage/Sea';
 import { ITaleProps } from '../../types/ITaleProps.interface';
+import Dragon from '../../pages/DragonPage/Dragon';
 
 interface ITale {
 	tale: ITaleProps;
@@ -18,7 +19,7 @@ const Tale: FC<ITale> = ({ tale }) => {
 			case 'Sea':
 				return (<Sea tale={tale} />);
 			case 'Dragon':
-				return;
+				return (<Dragon tale={tale} />);
 			case 'Hero':
 				return;
 			case 'Wasteland':

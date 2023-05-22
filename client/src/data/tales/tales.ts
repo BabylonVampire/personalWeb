@@ -32,7 +32,7 @@ const tales: ITaleProps[] = [
 		link: '/Sea',
 		content: [
 			{
-				className: 'asd',
+				className: 'headTitle',
 				type: 'title',
 				text: 'Море',
 				image: '',
@@ -49,6 +49,16 @@ const tales: ITaleProps[] = [
 				options: {
 					appearanceDirection: 'right',
 					position: 'right'
+				}
+			},
+			{
+				className: 'fish',
+				type: 'image',
+				text: 'src/pics/fish.png',
+				image: '',
+				options: {
+					appearanceDirection: 'left',
+					position: 'left'
 				}
 			},
 			{
@@ -72,16 +82,6 @@ const tales: ITaleProps[] = [
 				}
 			},
 			{
-				className: 'paragraph4',
-				type: 'text',
-				text: 'Улыбка заиграла на лице, давно позабывшем эту гримасу. Желание обуздать владыку тех мест, на коих держится сама суть его жизни пересилила манящий в далеке огонек ставшего родным дома. Однако, как бы долго не гнался за хозяином морей рыбак, не мог он догнать взгляд полный ехидства и задора, до тех пор, пока и вовсе не растворились глаза в пучине морской. И тогда услышал он голос глаз тех, медленно стихающий под завыванием ветра и шумом моря – “Море не простит тебе ошибку, допущенную однажды, забыл ты о нити своей, что порвалась по пути. Теперь участь твоя – вечное плавание в темноте”.',
-				image: '',
-				options: {
-					appearanceDirection: 'left',
-					position: 'left'
-				}
-			},
-			{
 				className: 'eyes',
 				type: 'image',
 				text: 'src/pics/gifs/eyes.gif',
@@ -89,6 +89,16 @@ const tales: ITaleProps[] = [
 				options: {
 					appearanceDirection: 'top',
 					position: 'center'
+				}
+			},
+			{
+				className: 'paragraph4',
+				type: 'text',
+				text: 'Улыбка заиграла на лице, давно позабывшем эту гримасу. Желание обуздать владыку тех мест, на коих держится сама суть его жизни пересилила манящий в далеке огонек ставшего родным дома. Однако, как бы долго не гнался за хозяином морей рыбак, не мог он догнать взгляд полный ехидства и задора, до тех пор, пока и вовсе не растворились глаза в пучине морской. И тогда услышал он голос глаз тех, медленно стихающий под завыванием ветра и шумом моря – “Море не простит тебе ошибку, допущенную однажды, забыл ты о нити своей, что порвалась по пути. Теперь участь твоя – вечное плавание в темноте”.',
+				image: '',
+				options: {
+					appearanceDirection: 'left',
+					position: 'left'
 				}
 			},
 			{
@@ -101,6 +111,16 @@ const tales: ITaleProps[] = [
 					position: 'right'
 				}
 			},
+			{
+				className: 'boat',
+				type: 'image',
+				text: 'src/pics/boat.png',
+				image: '',
+				options: {
+					appearanceDirection: 'left',
+					position: 'left'
+				}
+			}
 		]
 	},
 	{
