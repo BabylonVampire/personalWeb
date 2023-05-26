@@ -1,0 +1,50 @@
+.beam {
+	left: calc(var(--index) * 30);
+	position: absolute;
+    rotate: 45deg;
+	height: 100vh;
+    background-color: #fff;
+    filter: blur(10px);
+    opacity: 0.2;
+}
+
+.beam_1 {
+    width: 20px;
+    top: -66px;
+	animation: beam_animation forwards infinite linear 3.2s;
+}
+
+.beam_2 {
+    width: 10px;
+    top: -18px;
+	animation: beam_animation forwards infinite linear 3.5s;
+}
+
+.beam_3 {
+    width: 20px;
+    top: 69px;
+	animation: beam_animation forwards infinite linear 4s;
+}
+
+.beam_4 {
+	width: 20px;
+    top: 124px;
+	animation: beam_animation forwards infinite linear 3s;
+}
+
+@-webkit-keyframes beam_animation {
+	from {
+		opacity: 0.2;
+		box-shadow: 0 0 0px 0px #fff;
+	}
+
+	50% {
+		opacity: 0.1;
+		box-shadow: 0 0 20px 5px #fff;
+	}
+
+	to {
+		opacity: 0.2;
+		box-shadow: 0 0 0px 0px #fff;
+	}
+}

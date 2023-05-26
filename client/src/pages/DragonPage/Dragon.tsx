@@ -1,10 +1,8 @@
 import { FC } from 'react'
 import { ITaleProps } from '../../types/ITaleProps.interface';
-import TaleTitle from '../../components/Tale/TaleTitle/TaleTitle';
-import TaleText from '../../components/Tale/TaleText/TaleText';
-import TaleImage from '../../components/Tale/TaleImage/TaleImage';
-import './Dragon.scss';
+import { taleContentRender } from '../utils/taleContentRender';
 import Clouds from '../../animations/Clouds/Clouds';
+import './Dragon.scss';
 
 interface IDragonProps {
 	tale: ITaleProps;
@@ -13,27 +11,21 @@ interface IDragonProps {
 const Dragon: FC<IDragonProps> = ({ tale }) => {
 	return (
 		<div className="dragon">
-			<div className="dragon_hero">
-				<Clouds />
-				<div className="hero_back" />
+			<div className="dragon__hero">
+				<div className="cloudsBox">
+					<Clouds />
+				</div>
+				<div className="dragon__title">Дракон</div>
+				<div className="ground" />
+				<div className="dragon__hero__back" />
 			</div>
-			<div className="dragonTaleContainer">
+			<div className="dragon__container">
 				{
-					tale.content.map((item) => {
-						switch (item.type) {
-							case 'title':
-								return (<TaleTitle className={item.className} options={item.options} text={item.text} />);
-							case 'text':
-								return (<TaleText className={item.className} options={item.options} text={item.text} />);
-							case 'image':
-								return (<TaleImage className={item.className} options={item.options} text={item.text} />);
-							default:
-								console.error("[!] Invalid 'type' value, use only 'title', 'text', 'image'")
-								break;
-						}
-					})
+					taleContentRender(tale)
 				}
-				<div className="epilogue" />
+				<div className="epilogue dragon__epilogue">
+					<div className="dragon__epilogue__pic" />
+				</div>
 			</div>
 		</div>
 	)

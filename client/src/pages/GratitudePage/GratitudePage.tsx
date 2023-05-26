@@ -28,8 +28,8 @@ const GratitudePage: FC<IGratitudePageProps> = ({ lines }) => {
 	return (
 		<div className='gratitudePage' >
 			<div className="runningLines" />
-			<div className="gratitudePage_container" >
-				<div className="gratitudePage_image" />
+			<div className="gratitudePage__container" >
+				<div className="gratitudePage__image" />
 			</div>
 		</div>
 	)

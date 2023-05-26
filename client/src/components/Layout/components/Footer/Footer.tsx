@@ -9,17 +9,17 @@ interface IFooterProps {
 }
 
 const Footer: FC<IFooterProps> = ({ people, email, phone }) => (
-	<div className='Footer'>
-		<div className="people_container">
-			<div className="people_title">
-				причастные
+	<div className='footer'>
+		<div className="footer__people">
+			<div className="footer__people__title">
+				Причастные
 			</div>
 			<Divider />
-			<div className="people">
+			<div className="footer__people__container">
 				{
 					people.map((person) => {
 						return (
-							<div className="person">
+							<div className="person" key={person}>
 								{person}
 							</div>
 						)
@@ -27,12 +27,12 @@ const Footer: FC<IFooterProps> = ({ people, email, phone }) => (
 				}
 			</div>
 		</div>
-		<div className="contacts_conteiner">
-			<div className="contacts_title">
-				контакты
+		<div className="footer__contacts">
+			<div className="footer__contacts__title">
+				Контакты
 			</div>
 			<Divider />
-			<div className="contacts">
+			<div className="footer__contacts__container">
 				<div className="phone">
 					{phone}
 				</div>

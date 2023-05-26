@@ -11,7 +11,7 @@ const Layout: FC<ILayoutProps> = ({ children }) => (
         <div className='container'>
             {children}
         </div>
-        <Footer email="asd" phone="asd" people={['a', 'a', 'a', 'a']}/>
+        <Footer email="nikitatabalov@gmail.com" phone="" people={['Вавилонский Вампир', 'Артем Правдеподобный']}/>
     </div>
 );
 

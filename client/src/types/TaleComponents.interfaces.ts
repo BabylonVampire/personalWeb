@@ -3,8 +3,14 @@ export interface ITaleComponentsOptions {
 	position: string;
 }
 
-export interface ITaleComponentsProps {
+export interface ITaleTextComponentsProps {
 	text: string;
+	className: string;
+	options: ITaleComponentsOptions;
+}
+
+export interface ITaleImageComponentsProps {
+	image: string;
 	className: string;
 	options: ITaleComponentsOptions;
 }

@@ -21,7 +21,11 @@ const App: FC = () => {
 						{
 							tales.map((tale) => {
 								return (
-									<Route path={tale.link} element={<Tale tale={tale} />} />
+									<Route
+										key={tale.link}
+										path={tale.link}
+										element={<Tale tale={tale} />} 
+									/>
 								)
 							})
 						}

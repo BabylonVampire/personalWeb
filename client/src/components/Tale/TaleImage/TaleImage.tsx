@@ -1,11 +1,11 @@
 import { FC, useEffect } from 'react'
-import { ITaleComponentsProps } from '../../../types/TaleComponents.interfaces';
 import setAppearanceDirection from '../utils/setAppearanceDirection';
 import optionsCheck from '../utils/optionsCheck';
 import setMargin from '../utils/setMargin';
 import './TaleImage.scss';
+import { ITaleImageComponentsProps } from '../../../types/TaleComponents.interfaces';
 
-const TaleImage: FC<ITaleComponentsProps> = ({ text, className, options }) => {
+const TaleImage: FC<ITaleImageComponentsProps> = ({ image, className, options }) => {
 
 	optionsCheck(options);
 
@@ -20,7 +20,7 @@ const TaleImage: FC<ITaleComponentsProps> = ({ text, className, options }) => {
 			className={`tale_image ${className}`}
 			style={{ 
 				margin: margin,
-				backgroundImage: `url(${text})` 
+				backgroundImage: `url(${image})` 
 			}}
 		/>
 	)

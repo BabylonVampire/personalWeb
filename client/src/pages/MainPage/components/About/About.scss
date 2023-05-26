@@ -1,56 +1,49 @@
-.about,
-.about__bug__container,
-.about__wrapper,
-.about__frame {
-	width: 100%;
-}
-
-.about,
-.about__bug__container,
-.about__wrapper {
-	height: 100vh;
-
-}
-
 .about {
+	width: 100%;
+	height: 100vh;
 	position: relative;
 	z-index: 4;
 	background-color: #111111;
-}
 
-.about__bug__container {
-	overflow: hidden;
-	position: absolute;
-	z-index: 5;
-}
+	&__wrapper {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-.about__wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
+	&__bug__container {
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+		position: absolute;
+		z-index: 5;
+	}
 
-.about__container {
-	height: calc(var(--index) * 20);
-	width: calc(var(--index) * 20);
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	color: #fff;
-	border-radius: 8px;
-	font-size: calc(var(--index));
-	font-family: FortuneC;
-}
+	&__container {
+		height: calc(var(--index) * 20);
+		width: calc(var(--index) * 20);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		color: #fff;
+		border-radius: 8px;
+		font-size: calc(var(--index));
+		font-family: FortuneC;
+	}
 
-.about__title {
-	font-size: calc(var(--index) * 2);
-	font-family: fontisland;
-}
+	&__title {
+		font-size: calc(var(--index) * 2);
+		font-family: fontisland;
+	}
 
-.about__frame {
-	height: 15%;
-	background-image: url(../../../../pics/about_frame.png);
-	background-size: cover;
-	filter: invert(1);
+	&__frame {
+		width: 100%;
+		height: 15%;
+		background-image: url(/src/pics/MainPage/about_frame.png);
+		background-size: cover;
+		filter: invert(1);
+	}
 }

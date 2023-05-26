@@ -27,6 +27,13 @@
     animation: boat forwards infinite ease-in-out 5s;
 }
 
+.underground_city {
+	position: relative;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+}
+
 @-webkit-keyframes boat {
 	0% {
 		transform: translate(0, 0) rotate(0);

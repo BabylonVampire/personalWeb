@@ -12,9 +12,9 @@ const Head: FC<IHeadProps> = ({ title }) => {
             <div className="layer title">
                 <p>{title}</p>
             </div>
-            <div className='layer layer_bottom' />
-            <div className='layer layer_middle' />
-            <div className='layer layer_top' />
+            <div className='layer layer__bottom' />
+            <div className='layer layer__middle' />
+            <div className='layer layer__top' />
             {/* <div className="layer layer_between"/> */}
         </div>
     )

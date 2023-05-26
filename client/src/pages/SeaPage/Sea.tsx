@@ -1,11 +1,9 @@
 import { FC, useEffect } from 'react';
-import './Sea.scss';
+import { taleContentRender } from '../utils/taleContentRender';
+import { ITaleProps } from '../../types/ITaleProps.interface';
 import Wave from '../../animations/Wave/Wave';
 import setSky from 'fairy-anims/src/Stars';
-import TaleTitle from '../../components/Tale/TaleTitle/TaleTitle';
-import { ITaleProps } from '../../types/ITaleProps.interface';
-import TaleText from '../../components/Tale/TaleText/TaleText';
-import TaleImage from '../../components/Tale/TaleImage/TaleImage';
+import './Sea.scss';
 
 interface ISeaProps {
 	tale: ITaleProps;
@@ -18,25 +16,13 @@ const Sea: FC<ISeaProps> = ({ tale }) => {
 	}, [])
 
 	return (
-		<div className='sea'>
-			<div className="sea_hero" />
+		<div className='seaTale'>
+			<div className="seaTale__hero" />
 			<div className="starContainer" />
 			<Wave />
-			<div className="seaTaleContainer">
+			<div className="seaTale__container">
 				{
-					tale.content.map((item) => {
-						switch (item.type) {
-							case 'title':
-								return (<TaleTitle className={item.className} options={item.options} text={item.text} />);
-							case 'text':
-								return (<TaleText className={item.className} options={item.options} text={item.text} />);
-							case 'image':
-								return (<TaleImage className={item.className} options={item.options} text={item.text}/>);
-							default:
-								console.error("[!] Invalid 'type' value, use only 'title', 'text', 'image'")
-								break;
-						}
-					})
+					taleContentRender(tale)
 				}
 				<div className="epilogue" />
 			</div>

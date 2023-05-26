@@ -1,12 +1,78 @@
 .dragon {
 	animation: appearance 1.5s forwards ease-in-out;
+
+	&__hero {
+		background: linear-gradient(320deg, rgb(0, 0, 0) 0%, rgb(59 98 95) 100%);
+		position: relative;
+		height: 100vh;
+		width: 100%;
+		overflow: hidden;
+
+		&__back {
+			z-index: 5;
+			filter: sepia(0.4) brightness(0.8);
+			background-image: url(/src/pics/Dragon/cave.png);
+			background-size: cover;
+			background-position: center center;
+			position: absolute;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	&__title {
+		font-family: Rurintania;
+		position: absolute;
+		left: 45vw;
+		top: 40vh;
+		color: #ffffff80;
+		font-size: calc(var(--index) * 3);
+	}
+
+	&__container {
+		padding-top: 5em;
+		background: linear-gradient(0deg, rgba(17, 17, 17, 1) 0%, rgba(0, 0, 0, 1) 100%);
+		width: 100%;
+		min-height: 100vh;
+		overflow: hidden;
+	}
+
+	&__epilogue {
+		height: 70vh;
+
+		&__pic {
+			background-image: url(/src/pics/Dragon/fields.jpg);
+			position: absolute;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
 }
 
-.dragon_hero {
-	background: linear-gradient(0deg, rgba(17,17,17,1) 0%, rgba(185,185,185,1) 100%);
-	position: relative;
-	height: 100vh;
+.cloudsBox {
+	z-index: 2;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100vh;
+}
+
+
+.ground {
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40vh;
+	background-size: cover;
+	background-position: center;
+	background-image: url(/src/pics/Dragon/dragon_back.png);
+	transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
 }
 
 .sun {
@@ -18,21 +84,14 @@
 	background: radial-gradient(circle, rgb(255, 230, 28) 20%, rgba(17, 17, 17, 0) 50%);
 }
 
-.hero_back {
-	filter: sepia(0.4) brightness(0.8);
-	background-image: url(../../pics/use_later/cave.png);
-	background-size: cover;
-	position: absolute;
-	height: 100vh;
-	width: 100%;
-}
-
-.dragonTaleContainer {
-	width: 100%;
-	min-height: 100vh;
+.epilogue {
+	position: relative;
+	width: 70vw;
+	margin: 5em auto;
+	overflow: hidden;
+	border-radius: 100px;
 	overflow: hidden;
 }
-
 
 @-webkit-keyframes appearance {
 	from {

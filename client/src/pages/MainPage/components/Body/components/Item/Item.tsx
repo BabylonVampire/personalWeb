@@ -49,17 +49,17 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 			className="item"
 			style={{ flexDirection: index % 2 === 1 ? "row" : "row-reverse" }}
 		>
-			<div className="text_container_image_container">
+			<div className="text__backgroundWrapper">
 				<div
-					className="imageBehindPolygon"
-					id={`imageBehindPolygon${index}`}
+					className="text__backgroundWrapper__image"
+					id={`text__backgroundWrapper__image${index}`}
 					style={{ backgroundImage: `url(${backImage})` }}
 				/>
 			</div>
 			<Link to="/">
 				<div
 					className={itemImageClassName}
-					id={`item_image_${index}`}
+					id={`item__image__${index}`}
 					onClick={
 						() => {
 							handleZoomIn()
@@ -89,12 +89,12 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 					}}
 				>
 					<div
-						className="item_image"
+						className="item__image"
 						style={{ backgroundImage: `url(${image})` }}
 					/>
 				</div>
 			</Link>
-			<div className="text_container">
+			<div className="text__container">
 				<div
 					className={textContentClassName}
 					onMouseEnter={
@@ -113,8 +113,8 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 						top: `${mouseOverTextContent ? '-100%' : '0'}`
 					}}
 				>
-					<div className="item_title">{title}</div>
-					<div className="item_description">{description}</div>
+					<div className="item__title">{title}</div>
+					<div className="item__description">{description}</div>
 				</div>
 				<div className="text__frame" />
 			</div>

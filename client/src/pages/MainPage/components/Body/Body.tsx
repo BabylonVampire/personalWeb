@@ -16,6 +16,7 @@ const Body: FC<IBodyProps> = ({ gallery_items }) => {
 					gallery_items.map((item) => {
 						return (
 							<Item
+								key={`item_${gallery_items.indexOf(item)}_${item.link}`}
 								link={item.link}
 								title={item.preview.title}
 								description={item.preview.description}
