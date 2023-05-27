@@ -16,9 +16,9 @@ const Dunes = () => {
 				/>
 			</defs>
 			<g className="parallax-dune">
-				<use xlinkHref="#gentle-dune" x="150" y="6" fill="rgb(0,0,0)" />
-				<use xlinkHref="#gentle-dune" x="100" y="3" fill="rgb(2,0,36)" />
-				<use xlinkHref="#gentle-dune" x="50" y="0" fill="rgb(14 14 80)" />
+				<use xlinkHref="#gentle-dune" x="150" y="0" fill="#1a1710" />
+				<use xlinkHref="#gentle-dune" x="100" y="3" fill="#74623e" />
+				<use xlinkHref="#gentle-dune" x="50" y="6" fill="#ffca5f" />
 			</g>
 		</svg>
 

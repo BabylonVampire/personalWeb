@@ -2,28 +2,50 @@
 	width: 100%;
 	min-height: 100vh;
 	background-color: #111111;
+	scroll-behavior: smooth;
 
 	&__container {
 		width: 100%;
-		min-height: 100vh;
+		min-height: 300vh;
 		background-color: #4c3434;
 	}
 
 	&__hero {
+		position: fixed;
+		top: 0;
 		display: flex;
 		flex-direction: row;
 		width: 100%;
 		height: 100vh;
 
-		&__leftPart {
-			background-color: #ffca5f00;
-			flex: 1;
+		&__back {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background-color: #6e9dcb;
+
+			&__box {
+				isolation: isolate;
+
+				&__slider {
+					height: 100vh;
+					// width: calc(100 / var(--scrollTop)) + "%";
+					background-color: #000;
+					mix-blend-mode: hue;
+					position: absolute;
+					top: 0;
+					right: 0;
+				}
+			}
 		}
 
-		&__rightPart {
-			background-color: #332e2400;
-			mix-blend-mode: difference;
-			flex: 1;
+		&__starBox {
+			width: 50%;
+			height: 100vh;
+			position: absolute;
+			top: 0;
+			right: 0;
+
 		}
 	}
 }
