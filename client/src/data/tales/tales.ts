@@ -212,8 +212,8 @@ const tales: ITaleProps[] = [
 			image: '/src/pics/cards/wastes.jpg',
 			backImage: '/src/pics/MainPage/layer__bottom.png',
 		},
-		name: 'Wasteland',
-		link: '/Wasteland',
+		name: 'Waste',
+		link: '/Waste',
 		content: [{
 			className: '',
 			type: '',
