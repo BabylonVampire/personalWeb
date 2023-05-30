@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
-import { ArticlesModule } from './articles/articles.module';
-import { Article } from './articles/entities/article.entity';
+import { TalesModule } from './tales/tales.module';
+import { Tale } from './tales/entities/tale.entity';
+import { TaleContentModule } from './tale-content/tale-content.module';
+import { TaleContent } from './tale-content/entities/tale-content.entity';
 
 @Module({
     imports: [ConfigModule.forRoot({
@@ -14,10 +16,10 @@ import { Article } from './articles/entities/article.entity';
         username: process.env.POSTGRES_USER,
         password: String(process.env.POSTGRES_PASSWORD),
         database: process.env.POSTGRES_DB,
-        models: [Article],
+        models: [Tale, TaleContent],
         autoLoadModels: true,
         synchronize: true,
-    }), ArticlesModule,],
+    }), TalesModule, TaleContentModule,],
     controllers: [],
     providers: [],
 })

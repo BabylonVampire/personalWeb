@@ -31,6 +31,12 @@
 		border-width: calc(var(--index) / 3);
 		cursor: pointer;
 	}
+
+	&__description {
+		font-size: calc(var(--index) * 1.5);
+		font-family: fontisland;
+    	padding: calc(var(--index));
+	}
 }
 
 .text {

@@ -1,18 +1,18 @@
 import { FC, useEffect } from 'react'
-import { ITaleComponentsProps } from '../../../types/TaleComponents.interfaces';
+import { ITaleTextComponentsProps } from '../../../types/TaleComponents.interfaces';
 import optionsCheck from '../utils/optionsCheck';
 import setAppearanceDirection from '../utils/setAppearanceDirection';
 import setMargin from '../utils/setMargin';
 import './TaleText.scss';
 
-const TaleText: FC<ITaleComponentsProps> = ({ text, className, options }) => {
+const TaleText: FC<ITaleTextComponentsProps> = ({ text, className, options }) => {
 	optionsCheck(options);
 
 	useEffect(() => {
 		setAppearanceDirection(className, options);
-	}, [])
+	}, [className, options])
 	
-	let margin = setMargin(options.position);
+	const margin = setMargin(options.position);
 
 
 	return (

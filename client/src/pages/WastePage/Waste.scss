@@ -5,9 +5,10 @@
 	scroll-behavior: smooth;
 
 	&__container {
+		position: absolute;
+		z-index: 2;
 		width: 100%;
 		min-height: 300vh;
-		background-color: #4c3434;
 	}
 
 	&__hero {
@@ -47,5 +48,9 @@
 			right: 0;
 
 		}
+	}
+
+	&__epilogue {
+		height: 100vh;
 	}
 }

@@ -49,7 +49,7 @@ const Waste: FC<IWasteProps> = ({ tale }) => {
 				}
 			}
 		);
-		//#6e9dcb #9f3463
+
 		gsap.fromTo('.waste__hero__back', { backgroundColor: '#9f3463' },
 			{
 				backgroundColor: '#6e9dcb',
@@ -79,7 +79,7 @@ const Waste: FC<IWasteProps> = ({ tale }) => {
 				{
 					taleContentRender(tale)
 				}
-				<div className="epilogue" />
+				<div className="waste__epilogue" />
 			</div>
 		</div>
 	)

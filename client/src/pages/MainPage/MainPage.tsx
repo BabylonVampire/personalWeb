@@ -10,10 +10,10 @@ const MainPage = () => {
 
 	useEffect(() => {
 
-		let items = gsap.utils.toArray<HTMLElement>('.item__container')
-		let images = gsap.utils.toArray<HTMLElement>('.item__image')
-		let images_back = gsap.utils.toArray<HTMLElement>('.text__backgroundWrapper__image')
-		let text_content = gsap.utils.toArray<HTMLElement>('.text__content')
+		const items = gsap.utils.toArray<HTMLElement>('.item__container')
+		const images = gsap.utils.toArray<HTMLElement>('.item__image')
+		const images_back = gsap.utils.toArray<HTMLElement>('.text__backgroundWrapper__image')
+		const text_content = gsap.utils.toArray<HTMLElement>('.text__content')
 
 		gsap.registerPlugin(ScrollTrigger)
 		gsap.fromTo('.Head', { opacity: 1 },

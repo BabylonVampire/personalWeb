@@ -40,7 +40,7 @@ const setAppearanceDirection = (className: string, options: ITaleComponentsOptio
 				duration: 0.5,
 				yoyo: true,
 				scrollTrigger: {
-					start: '-600',
+					start: '-500',
 					trigger: `.${className}`,
 					toggleActions: 'play none none reverse'
 				}

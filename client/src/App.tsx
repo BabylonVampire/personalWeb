@@ -7,12 +7,12 @@ import tales from './data/tales/tales.ts';
 import Tale from './components/Tale/Tale.tsx';
 import GratitudePage from './pages/GratitudePage/GratitudePage.tsx';
 import { lines } from './data/pages/gratitudePageData.ts';
+import { getTale } from './data/tales/getTale.ts';
 
 const App: FC = () => {
-
+	console.log(getTale("Дракон"))
 	return (
-
-		<div className="App" >
+		<div className="App" id="scroll-bar">
 			<BrowserRouter>
 				<Layout>
 					<Routes>

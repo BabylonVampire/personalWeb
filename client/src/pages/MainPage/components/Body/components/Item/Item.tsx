@@ -63,7 +63,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 					onClick={
 						() => {
 							handleZoomIn()
-							let el = document.getElementById('scene_manager')
+							const el = document.getElementById('scene_manager')
 							el?.classList.add('blackout');
 							setTimeout(() => {
 								navigate(link);

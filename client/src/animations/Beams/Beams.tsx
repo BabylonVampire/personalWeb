@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import './Beams.scss';
 
 const Beams = () => {

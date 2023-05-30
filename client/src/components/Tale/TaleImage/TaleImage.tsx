@@ -11,9 +11,9 @@ const TaleImage: FC<ITaleImageComponentsProps> = ({ image, className, options })
 
 	useEffect(() => {
 		setAppearanceDirection(className, options);
-	}, [])
+	}, [className, options])
 	
-	let margin = setMargin(options.position);
+	const margin = setMargin(options.position);
 
 	return (
 		<div
