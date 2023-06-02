@@ -1,6 +1,5 @@
 import { FC, useEffect } from 'react'
 import { taleContentRender } from '../utils/taleContentRender'
-import { ITaleProps } from '../../types/ITaleProps.interface'
 import './Waste.scss'
 import Dunes from './components/Dunes/Dunes'
 import Sun from './components/Sun/Sun'
@@ -8,9 +7,10 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import setSky from 'fairy-anims/src/Stars'
 import { IOptions } from 'fairy-anims/src/Stars/stars-options.interface'
+import { ITaleResponse } from '../../types/ITaleResponse.interface'
 
 interface IWasteProps {
-	tale: ITaleProps
+	tale: ITaleResponse
 }
 
 const Waste: FC<IWasteProps> = ({ tale }) => {

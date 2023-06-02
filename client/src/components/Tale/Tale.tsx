@@ -1,30 +1,41 @@
-import { FC, useEffect } from 'react'
+import { FC, useEffect, useState } from 'react'
 import Sea from '../../pages/SeaPage/Sea';
-import { ITaleProps } from '../../types/ITaleProps.interface';
 import Dragon from '../../pages/DragonPage/Dragon';
 import Waste from '../../pages/WastePage/Waste';
+import { ITaleResponse } from '../../types/ITaleResponse.interface';
+import { getTale } from '../../data/tales/getTale';
 
 interface ITale {
-	tale: ITaleProps;
+	tale: ITaleResponse;
 }
 
 const Tale: FC<ITale> = ({ tale }) => {
 
+	const [fullTale, setFullTale] = useState<ITaleResponse>()
+
 	useEffect(() => {
 		scroll(0, 0);
-	}, [])
+		getTale(tale.title).then((result) => {
+			setFullTale(result)
+		})
+	}, [tale.title])
 
+	console.log(fullTale)
 
-	const fairyDefinition = (name: string) => {
-		switch (name) {
+	if (fullTale === undefined) {
+		return <div className='loading'>Загрузка...</div>
+	}
+
+	const fairyDefinition = (title: string) => {
+		switch (title) {
 			case 'Sea':
-				return (<Sea tale={tale} />);
+				return (<Sea tale={fullTale} />);
 			case 'Dragon':
-				return (<Dragon tale={tale} />);
+				return (<Dragon tale={fullTale} />);
 			case 'Hero':
 				return;
 			case 'Waste':
-				return (<Waste tale={tale} />);
+				return (<Waste tale={fullTale} />);
 			case 'Tower':
 				return;
 			default:
@@ -35,7 +46,7 @@ const Tale: FC<ITale> = ({ tale }) => {
 	return (
 		<div className='tale'>
 			{
-				fairyDefinition(tale.name)
+				fairyDefinition(tale.title)
 			}
 		</div>
 	)

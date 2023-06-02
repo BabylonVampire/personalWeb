@@ -1,14 +1,15 @@
 import { FC } from 'react'
-import { ITaleProps } from '../../types/ITaleProps.interface';
 import { taleContentRender } from '../utils/taleContentRender';
 import Clouds from '../../animations/Clouds/Clouds';
 import './Dragon.scss';
+import { ITaleResponse } from '../../types/ITaleResponse.interface';
 
 interface IDragonProps {
-	tale: ITaleProps;
+	tale: ITaleResponse;
 }
 
 const Dragon: FC<IDragonProps> = ({ tale }) => {
+	console.log(tale)
 	return (
 		<div className="dragon">
 			<div className="dragon__hero">

@@ -1,4 +1,4 @@
 export class CreateTaleContentDto {
-	readonly content: string
+	readonly taleBlocks: string
 	readonly taleId: string
 }

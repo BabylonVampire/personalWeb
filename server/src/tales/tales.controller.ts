@@ -1,13 +1,15 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseInterceptors, UploadedFiles, Logger } from '@nestjs/common';
 import { TalesService } from './tales.service';
 import { CreateTaleDto } from './dto/create-tale.dto';
 import { UpdateTaleDto } from './dto/update-tale.dto';
 import { ApiBody, ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { Tale } from './entities/tale.entity';
+import { FileFieldsInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 
 @ApiTags("Статьи")
 @Controller('tales')
 export class TalesController {
+	logger = new Logger('Tales Controller')
 	constructor(private readonly talesService: TalesService) { }
 
 	@ApiOperation({ summary: 'Создать новую статью' })
@@ -18,8 +20,14 @@ export class TalesController {
 	})
 	@ApiBody({ type: CreateTaleDto })
 	@Post()
-	create(@Body() createTaleDto: CreateTaleDto) {
-		return this.talesService.create(createTaleDto);
+	@UseInterceptors(FileFieldsInterceptor([
+		{ name: 'image', maxCount: 1 },
+		{ name: 'backImage', maxCount: 1 },
+	  ]))
+	create(@Body() createTaleDto: CreateTaleDto, @UploadedFiles() files) {
+		const image = files.image[0];
+		const backImage = files.backImage[0];
+		return this.talesService.create(createTaleDto, image, backImage);
 	}
 
 	@ApiOperation({ summary: 'Вернуть все статьи' })

@@ -5,16 +5,20 @@ import { InjectModel } from '@nestjs/sequelize';
 import { Tale } from './entities/tale.entity';
 import { TaleContentService } from 'src/tale-content/tale-content.service';
 import { TaleContent } from 'src/tale-content/entities/tale-content.entity';
+import { ImagesService } from 'src/images/images.service';
+import { ContentBlock } from 'src/content-blocks/entities/content-block.entity';
+import { BlockOptions } from 'src/content-blocks/entities/block-options.entity';
 
 @Injectable()
 export class TalesService {
-	constructor(@InjectModel(Tale) private taleRepository: typeof Tale) {
+	constructor(@InjectModel(Tale) private taleRepository: typeof Tale,
+		private imagesService: ImagesService) { }
 
-	}
-
-	async create(createTaleDto: CreateTaleDto) {
+	async create(createTaleDto: CreateTaleDto, image: Express.Multer.File, backImage: Express.Multer.File) {
 		try {
-			const tale = await this.taleRepository.create(createTaleDto);
+			const imageFileName = this.imagesService.createFileUUID(image)
+			const backImageFileName = this.imagesService.createFileUUID(backImage)
+			const tale = await this.taleRepository.create({ ...createTaleDto, image: imageFileName, backImage: backImageFileName });
 			if (!tale) {
 				throw new HttpException(
 					`Не получилось создать новую статью`,
@@ -53,7 +57,15 @@ export class TalesService {
 			const tale = await this.taleRepository.findOne({
 				where: { title },
 				include: [
-					{ model: TaleContent }
+					{ model: TaleContent, include: [
+						{ 
+							model: ContentBlock, include: [
+								{
+									model: BlockOptions
+								}
+							]
+						} ]
+					}
 				]
 			});
 			if (!tale) {

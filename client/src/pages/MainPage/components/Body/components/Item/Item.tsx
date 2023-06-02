@@ -53,7 +53,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 				<div
 					className="text__backgroundWrapper__image"
 					id={`text__backgroundWrapper__image${index}`}
-					style={{ backgroundImage: `url(${backImage})` }}
+					style={{ backgroundImage: `url(${import.meta.env.VITE_STATIC_URL}/${backImage})` }}
 				/>
 			</div>
 			<Link to="/">
@@ -90,7 +90,7 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 				>
 					<div
 						className="item__image"
-						style={{ backgroundImage: `url(${image})` }}
+						style={{ backgroundImage: `url(${import.meta.env.VITE_STATIC_URL}/${image})` }}
 					/>
 				</div>
 			</Link>

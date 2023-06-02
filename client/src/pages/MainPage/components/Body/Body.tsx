@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import "./Body.scss";
 import Item from './components/Item/Item';
-import { ITaleProps } from '../../../../types/ITaleProps.interface';
+import { ITaleResponse } from '../../../../types/ITaleResponse.interface';
 
 interface IBodyProps {
-	gallery_items: ITaleProps[]
+	gallery_items: ITaleResponse[]
 }
 
 const Body: FC<IBodyProps> = ({ gallery_items }) => {
@@ -18,10 +18,10 @@ const Body: FC<IBodyProps> = ({ gallery_items }) => {
 							<Item
 								key={`item_${gallery_items.indexOf(item)}_${item.link}`}
 								link={item.link}
-								title={item.preview.title}
-								description={item.preview.description}
-								image={item.preview.image}
-								backImage={item.preview.backImage}
+								title={item.title}
+								description={item.descriptionPreview}
+								image={item.image}
+								backImage={item.backImage}
 								index={gallery_items.indexOf(item)}
 							/>
 						)

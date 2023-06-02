@@ -20,7 +20,7 @@ const TaleImage: FC<ITaleImageComponentsProps> = ({ image, className, options })
 			className={`tale_image ${className}`}
 			style={{ 
 				margin: margin,
-				backgroundImage: `url(${image})` 
+				backgroundImage: `url(${import.meta.env.VITE_STATIC_URL}/${image})` 
 			}}
 		/>
 	)

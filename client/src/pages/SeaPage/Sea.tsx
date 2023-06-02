@@ -1,12 +1,12 @@
 import { FC, useEffect } from 'react';
 import { taleContentRender } from '../utils/taleContentRender';
-import { ITaleProps } from '../../types/ITaleProps.interface';
 import Wave from '../../animations/Wave/Wave';
 import setSky from 'fairy-anims/src/Stars';
 import './Sea.scss';
+import { ITaleResponse } from '../../types/ITaleResponse.interface';
 
 interface ISeaProps {
-	tale: ITaleProps;
+	tale: ITaleResponse;
 }
 
 const Sea: FC<ISeaProps> = ({ tale }) => {
