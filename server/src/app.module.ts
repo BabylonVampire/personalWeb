@@ -9,27 +9,31 @@ import { ContentBlocksModule } from './content-blocks/content-blocks.module';
 import { ContentBlock } from './content-blocks/entities/content-block.entity';
 import { BlockOptions } from './content-blocks/entities/block-options.entity';
 import { ImagesModule } from './images/images.module';
-import { ServeStaticModule } from '@nestjs/serve-static';
 import { resolve } from 'path';
+import { Image as ImageModel } from './images/entities/image.entity';
 
 @Module({
-	imports: [ConfigModule.forRoot({
-		envFilePath: `.env`,
-	}),
-	ServeStaticModule.forRoot({
-		rootPath: resolve(__dirname, 'static'),
-	}), SequelizeModule.forRoot({
-		dialect: 'postgres',
-		host: process.env.HOST,
-		port: Number(process.env.POSTGRES_PORT),
-		username: process.env.POSTGRES_USER,
-		password: String(process.env.POSTGRES_PASSWORD),
-		database: process.env.POSTGRES_DB,
-		models: [Tale, TaleContent, ContentBlock, BlockOptions],
-		autoLoadModels: true,
-		synchronize: true,
-	}), TalesModule, TaleContentModule, ContentBlocksModule, ImagesModule,],
+	imports: [
+		ConfigModule.forRoot({
+			envFilePath: `.env`,
+		}),
+		SequelizeModule.forRoot({
+			dialect: 'postgres',
+			host: process.env.HOST,
+			port: Number(process.env.POSTGRES_PORT),
+			username: process.env.POSTGRES_USER,
+			password: String(process.env.POSTGRES_PASSWORD),
+			database: process.env.POSTGRES_DB,
+			models: [Tale, TaleContent, ContentBlock, BlockOptions, ImageModel],
+			autoLoadModels: true,
+			synchronize: true,
+		}),
+		TalesModule,
+		TaleContentModule,
+		ContentBlocksModule,
+		ImagesModule,
+	],
 	controllers: [],
 	providers: [],
 })
-export class AppModule { }
+export class AppModule {}
