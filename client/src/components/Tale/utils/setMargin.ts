@@ -14,6 +14,6 @@ const setMargin = (position: string) => {
 			return undefined;
 	}
 	return margin;
-}
+};
 
 export default setMargin;

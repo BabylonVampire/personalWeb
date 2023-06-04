@@ -9,7 +9,12 @@
 	&__container {
 		width: 100%;
 		min-height: 100vh;
-		background: linear-gradient(180deg, rgb(14 14 80) 0%, rgb(2, 0, 36) 50%, rgb(0, 0, 0) 100%);
+		background: linear-gradient(
+			180deg,
+			rgb(14 14 80) 0%,
+			rgb(2, 0, 36) 50%,
+			rgb(0, 0, 0) 100%
+		);
 		overflow: hidden;
 	}
 }

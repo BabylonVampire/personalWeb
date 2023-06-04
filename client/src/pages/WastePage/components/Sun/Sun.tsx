@@ -1,12 +1,11 @@
-import React from 'react'
-import './Sun.scss'
+import './Sun.scss';
 
 const Sun = () => {
 	return (
 		<>
-			<div className='sun' />
+			<div className="sun" />
 		</>
-	)
-}
+	);
+};
 
-export default Sun
+export default Sun;

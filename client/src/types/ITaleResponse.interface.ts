@@ -1,8 +1,9 @@
 export interface ITaleContent {
-	index: number,
-	id: string,
-	taleId: string,
+	index: number;
+	id: string;
+	taleId: string;
 	contentBlocks: {
+		index: number;
 		className: string;
 		type: string;
 		text: string;
@@ -11,20 +12,20 @@ export interface ITaleContent {
 			appearanceDirection: string;
 			position: string;
 		};
-	}[]
+	}[];
 }
 
 export interface ITaleResponse {
-	id: string,
+	id: string;
 
 	name: string;
 	link: string;
-	title: string,
-	description: string,
+	title: string;
+	description: string;
 
 	descriptionPreview: string;
 	image: string;
 	backImage: string;
 
-	content: ITaleContent,
+	content: ITaleContent;
 }

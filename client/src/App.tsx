@@ -11,12 +11,11 @@ import { ITaleResponse } from './types/ITaleResponse.interface.ts';
 import Memory from './pages/MemoryPage/Memory.tsx';
 
 const App: FC = () => {
-
 	const [tales, setTales] = useState<ITaleResponse[]>([]);
 
 	useEffect(() => {
-		getTales().then((result) => setTales(result))
-	}, [])
+		getTales().then((result) => setTales(result));
+	}, []);
 
 	return (
 		<div className="App" id="scroll-bar">
@@ -25,24 +24,25 @@ const App: FC = () => {
 					<Routes>
 						<Route path="/" element={<MainPage tales={tales} />} />
 						<Route path="/memory" element={<Memory />} />
-						<Route path="/gratitude" element={<GratitudePage lines={lines} />} />
-						{
-							tales.map((tale) => {
-								return (
-									<Route
-										key={tale.link}
-										path={tale.link}
-										element={<Tale tale={tale} />}
-									/>
-								)
-							})
-						}
+						<Route
+							path="/gratitude"
+							element={<GratitudePage lines={lines} />}
+						/>
+						{tales.map((tale) => {
+							return (
+								<Route
+									key={tale.link}
+									path={tale.link}
+									element={<Tale tale={tale} />}
+								/>
+							);
+						})}
 					</Routes>
 				</Layout>
 			</BrowserRouter>
 			<div id="scene_manager" />
 		</div>
 	);
-}
+};
 
 export default App;

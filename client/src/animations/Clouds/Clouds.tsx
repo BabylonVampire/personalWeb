@@ -7,7 +7,7 @@ const Clouds = () => {
 			<div className="clouds-2"></div>
 			<div className="clouds-3"></div>
 		</div>
-	)
-}
+	);
+};
 
 export default Clouds;

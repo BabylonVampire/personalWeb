@@ -1,17 +1,13 @@
-
 // Cloud vars
-$clouds: (
-	"https://s.cdpn.io/15514/clouds_2.png" 1000px 20s),
-	("https://s.cdpn.io/15514/clouds_1.png" 1000px 15s),
-	("https://s.cdpn.io/15514/clouds_3.png" 1579px 17s
-);
+$clouds: ('https://s.cdpn.io/15514/clouds_2.png' 1000px 20s),
+	('https://s.cdpn.io/15514/clouds_1.png' 1000px 15s),
+	('https://s.cdpn.io/15514/clouds_3.png' 1579px 17s);
 
 @for $i from 1 through length($clouds) {
-
-	$item : nth($clouds, $i);
-	$path : nth($item, 1);
-	$width : nth($item, 2);
-	$duration : nth($item, 3);
+	$item: nth($clouds, $i);
+	$path: nth($item, 1);
+	$width: nth($item, 2);
+	$duration: nth($item, 3);
 
 	@keyframes clouds-loop-#{$i} {
 		to {

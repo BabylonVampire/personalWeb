@@ -1,10 +1,11 @@
-import { ITaleProps } from "../../types/ITaleProps.interface";
+import { ITaleProps } from '../../types/ITaleProps.interface';
 
 const tales: ITaleProps[] = [
 	{
 		preview: {
 			title: 'Дракон',
-			description: 'Because the secret of all truth Is the quest for - and you`ll feel...',
+			description:
+				'Because the secret of all truth Is the quest for - and you`ll feel...',
 			image: '/src/pics/cards/dragon.jpg',
 			backImage: '/src/pics/Dragon/fields.jpg',
 		},
@@ -18,8 +19,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
+					position: 'left',
+				},
 			},
 			{
 				className: 'underground_city',
@@ -28,8 +29,8 @@ const tales: ITaleProps[] = [
 				image: '/src/pics/Dragon/underground_city.jpg',
 				options: {
 					appearanceDirection: 'bottom',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'dragon_paragraph_2',
@@ -38,8 +39,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'right',
-					position: 'right'
-				}
+					position: 'right',
+				},
 			},
 			{
 				className: 'dragon_paragraph_3',
@@ -48,8 +49,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
+					position: 'left',
+				},
 			},
 			{
 				className: 'dragon_paragraph_4',
@@ -58,15 +59,16 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'right',
-					position: 'right'
-				}
-			}
-		]
+					position: 'right',
+				},
+			},
+		],
 	},
 	{
 		preview: {
 			title: 'Море',
-			description: 'I see a coconut crab, who swims at your neighbor`s pool at night, who else hold their breth in there?..',
+			description:
+				'I see a coconut crab, who swims at your neighbor`s pool at night, who else hold their breth in there?..',
 			image: '/src/pics/cards/sea.jpg',
 			backImage: '/src/pics/Sea/sea_back.png',
 		},
@@ -80,8 +82,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'paragraph1',
@@ -90,8 +92,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'right',
-					position: 'right'
-				}
+					position: 'right',
+				},
 			},
 			{
 				className: 'fish',
@@ -100,8 +102,8 @@ const tales: ITaleProps[] = [
 				image: 'src/pics/Sea/fish.png',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
+					position: 'left',
+				},
 			},
 			{
 				className: 'paragraph2',
@@ -110,8 +112,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
+					position: 'left',
+				},
 			},
 			{
 				className: 'paragraph3',
@@ -120,8 +122,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'right',
-					position: 'right'
-				}
+					position: 'right',
+				},
 			},
 			{
 				className: 'eyes',
@@ -130,8 +132,8 @@ const tales: ITaleProps[] = [
 				image: 'src/pics/Sea/eyes.gif',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'paragraph4',
@@ -140,8 +142,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
+					position: 'left',
+				},
 			},
 			{
 				className: 'paragraph5',
@@ -150,8 +152,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'right',
-					position: 'right'
-				}
+					position: 'right',
+				},
 			},
 			{
 				className: 'boat',
@@ -160,15 +162,16 @@ const tales: ITaleProps[] = [
 				image: 'src/pics/Sea/boat.png',
 				options: {
 					appearanceDirection: 'left',
-					position: 'left'
-				}
-			}
-		]
+					position: 'left',
+				},
+			},
+		],
 	},
 	{
 		preview: {
 			title: 'Пустошь',
-			description: 'фыв',
+			description:
+				'Кто сражается с чудовищами, тому следует остерегаться, чтобы самому при этом не стать чудовищем. И если ты долго смотришь в бездну, то бездна тоже смотрит в тебя.',
 			image: '/src/pics/cards/wastes.jpg',
 			backImage: '/src/pics/Waste/waste.png',
 		},
@@ -182,8 +185,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__1',
@@ -192,8 +195,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__2',
@@ -202,8 +205,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__3',
@@ -212,8 +215,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__4',
@@ -222,8 +225,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__5',
@@ -232,8 +235,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__6',
@@ -242,8 +245,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__7',
@@ -252,8 +255,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__8',
@@ -262,8 +265,8 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
 			{
 				className: 'waste__paragraph__9',
@@ -272,10 +275,10 @@ const tales: ITaleProps[] = [
 				image: '',
 				options: {
 					appearanceDirection: 'top',
-					position: 'center'
-				}
+					position: 'center',
+				},
 			},
-		]
+		],
 	},
 	{
 		preview: {
@@ -286,16 +289,18 @@ const tales: ITaleProps[] = [
 		},
 		name: 'Tower',
 		link: '/Tower',
-		content: [{
-			className: '',
-			type: '',
-			text: 'testTitle',
-			image: '',
-			options: {
-				appearanceDirection: 'top',
-				position: ''
-			}
-		}]
+		content: [
+			{
+				className: '',
+				type: '',
+				text: 'testTitle',
+				image: '',
+				options: {
+					appearanceDirection: 'top',
+					position: '',
+				},
+			},
+		],
 	},
 	{
 		preview: {
@@ -306,16 +311,18 @@ const tales: ITaleProps[] = [
 		},
 		name: 'Statue',
 		link: '/Statue',
-		content: [{
-			className: '',
-			type: '',
-			text: 'testTitle',
-			image: '',
-			options: {
-				appearanceDirection: 'top',
-				position: ''
-			}
-		}]
+		content: [
+			{
+				className: '',
+				type: '',
+				text: 'testTitle',
+				image: '',
+				options: {
+					appearanceDirection: 'top',
+					position: '',
+				},
+			},
+		],
 	},
 	{
 		preview: {
@@ -326,18 +333,19 @@ const tales: ITaleProps[] = [
 		},
 		name: 'Hero',
 		link: '/Hero',
-		content: [{
-			className: '',
-			type: '',
-			text: 'testTitle',
-			image: '',
-			options: {
-				appearanceDirection: 'top',
-				position: ''
-			}
-		}]
+		content: [
+			{
+				className: '',
+				type: '',
+				text: 'testTitle',
+				image: '',
+				options: {
+					appearanceDirection: 'top',
+					position: '',
+				},
+			},
+		],
 	},
-
-]
+];
 
 export default tales;

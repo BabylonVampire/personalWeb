@@ -10,24 +10,21 @@ interface ISeaProps {
 }
 
 const Sea: FC<ISeaProps> = ({ tale }) => {
-
 	useEffect(() => {
-		setSky(100, 'starContainer')
-	}, [])
+		setSky(100, 'starContainer');
+	}, []);
 
 	return (
-		<div className='seaTale'>
+		<div className="seaTale">
 			<div className="seaTale__hero" />
 			<div className="starContainer" />
 			<Wave />
 			<div className="seaTale__container">
-				{
-					taleContentRender(tale)
-				}
+				{taleContentRender(tale)}
 				<div className="epilogue" />
 			</div>
 		</div>
-	)
-}
+	);
+};
 
 export default Sea;

@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react';
 import Sea from '../../pages/SeaPage/Sea';
 import Dragon from '../../pages/DragonPage/Dragon';
 import Waste from '../../pages/WastePage/Waste';
@@ -10,46 +10,39 @@ interface ITale {
 }
 
 const Tale: FC<ITale> = ({ tale }) => {
-
-	const [fullTale, setFullTale] = useState<ITaleResponse>()
+	const [fullTale, setFullTale] = useState<ITaleResponse>();
 
 	useEffect(() => {
 		scroll(0, 0);
 		getTale(tale.title).then((result) => {
-			setFullTale(result)
-		})
-	}, [tale.title])
+			setFullTale(result);
+		});
+	}, [tale.title]);
 
-	console.log(fullTale)
+	console.log(fullTale);
 
 	if (fullTale === undefined) {
-		return <div className='loading'>Загрузка...</div>
+		return <div className="loading">Загрузка...</div>;
 	}
 
 	const fairyDefinition = (title: string) => {
 		switch (title) {
 			case 'Sea':
-				return (<Sea tale={fullTale} />);
+				return <Sea tale={fullTale} />;
 			case 'Dragon':
-				return (<Dragon tale={fullTale} />);
+				return <Dragon tale={fullTale} />;
 			case 'Hero':
 				return;
-			case 'Waste':
-				return (<Waste tale={fullTale} />);
+			case 'wasteLand':
+				return <Waste tale={fullTale} />;
 			case 'Tower':
 				return;
 			default:
 				break;
 		}
-	}
+	};
 
-	return (
-		<div className='tale'>
-			{
-				fairyDefinition(tale.title)
-			}
-		</div>
-	)
-}
+	return <div className="tale">{fairyDefinition(tale.title)}</div>;
+};
 
 export default Tale;

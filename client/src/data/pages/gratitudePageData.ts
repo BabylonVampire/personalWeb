@@ -25,6 +25,6 @@ const lines = [
 	'I was gonna face up and let go',
 	'And by the light of dawn I`d put my brave face on',
 	'',
-]
+];
 
-export { lines }
+export { lines };

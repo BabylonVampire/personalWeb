@@ -35,7 +35,7 @@
 	&__description {
 		font-size: calc(var(--index) * 1.5);
 		font-family: fontisland;
-    	padding: calc(var(--index));
+		padding: calc(var(--index));
 	}
 }
 
@@ -51,7 +51,6 @@
 	}
 
 	&__backgroundWrapper {
-
 		z-index: -1;
 		position: absolute;
 		height: calc(var(--index) * 20);
@@ -95,7 +94,6 @@
 .scrollUp {
 	animation: scroll_up 0.5s ease-in-out 1 alternate forwards;
 }
-
 
 .glow_in {
 	animation-name: glowing_in;

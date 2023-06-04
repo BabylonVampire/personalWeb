@@ -30,19 +30,15 @@
 }
 
 @-webkit-keyframes blackout {
-
 	from {
-		// background-color: #f1f1f1;
 		opacity: 0;
 	}
-
 
 	50% {
 		opacity: 1;
 	}
 
 	to {
-		// background-color: #f1f1f1;
 		opacity: 0;
 	}
 }

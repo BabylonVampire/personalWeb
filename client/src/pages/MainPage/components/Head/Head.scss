@@ -20,7 +20,7 @@
 .layer__bottom {
 	z-index: 1;
 	transform: translate3d(0, calc(var(--scrollTop) / 1.6), 0);
-	background-image: url("/src/pics/MainPage/layer__bottom.png");
+	background-image: url('/src/pics/MainPage/layer__bottom.png');
 }
 
 .title {
@@ -39,18 +39,18 @@
 	filter: blur(1px);
 	z-index: 3;
 	transform: translate3d(0, calc(var(--scrollTop) / 2.5), 0);
-	background-image: url("/src/pics/MainPage/layer__middle.png");
+	background-image: url('/src/pics/MainPage/layer__middle.png');
 }
 
 .layer__top {
 	filter: blur(2px);
 	z-index: 4;
 	transform: translate3d(0, calc(var(--scrollTop) / 5), 0);
-	background-image: url("/src/pics/MainPage/layer__top.png");
+	background-image: url('/src/pics/MainPage/layer__top.png');
 }
 
 .layer_between {
 	top: calc(var(--index) * 3);
 	z-index: 6;
-	background-image: url("/src/pics/MainPage/layer_between.png");
+	background-image: url('/src/pics/MainPage/layer_between.png');
 }

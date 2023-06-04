@@ -1,34 +1,34 @@
 .beam {
 	left: calc(var(--index) * 30);
 	position: absolute;
-    rotate: 45deg;
+	rotate: 45deg;
 	height: 100vh;
-    background-color: #fff;
-    filter: blur(10px);
-    opacity: 0.2;
+	background-color: #fff;
+	filter: blur(10px);
+	opacity: 0.2;
 }
 
 .beam_1 {
-    width: 20px;
-    top: -66px;
+	width: 20px;
+	top: -66px;
 	animation: beam_animation forwards infinite linear 3.2s;
 }
 
 .beam_2 {
-    width: 10px;
-    top: -18px;
+	width: 10px;
+	top: -18px;
 	animation: beam_animation forwards infinite linear 3.5s;
 }
 
 .beam_3 {
-    width: 20px;
-    top: 69px;
+	width: 20px;
+	top: 69px;
 	animation: beam_animation forwards infinite linear 4s;
 }
 
 .beam_4 {
 	width: 20px;
-    top: 124px;
+	top: 124px;
 	animation: beam_animation forwards infinite linear 3s;
 }
 

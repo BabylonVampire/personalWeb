@@ -2,7 +2,11 @@
 	animation: appearance 1.5s forwards ease-in-out;
 
 	&__hero {
-		background: linear-gradient(320deg, rgb(0, 0, 0) 0%, rgb(59 98 95) 100%);
+		background: linear-gradient(
+			320deg,
+			rgb(0, 0, 0) 0%,
+			rgb(59 98 95) 100%
+		);
 		position: relative;
 		height: 100vh;
 		width: 100%;
@@ -31,7 +35,11 @@
 
 	&__container {
 		padding-top: 5em;
-		background: linear-gradient(0deg, rgba(17, 17, 17, 1) 0%, rgba(0, 0, 0, 1) 100%);
+		background: linear-gradient(
+			0deg,
+			rgba(17, 17, 17, 1) 0%,
+			rgba(0, 0, 0, 1) 100%
+		);
 		width: 100%;
 		min-height: 100vh;
 		overflow: hidden;
@@ -60,7 +68,6 @@
 	width: 100%;
 	height: 100vh;
 }
-
 
 .ground {
 	z-index: 1;

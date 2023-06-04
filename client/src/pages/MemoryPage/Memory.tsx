@@ -1,22 +1,19 @@
-import { useEffect } from "react"
-import './Memory.scss'
+import { useEffect } from 'react';
+import './Memory.scss';
 
 const Memory = () => {
+	useEffect(() => {}, []);
 
-	useEffect(() => {
-
-	}, [])
-	
-	const title = "FAFAFA"
+	const title = 'FAFAFA';
 
 	return (
 		<div className="memory">
-			<div className="memory__back"/>
-			<div className="memory__bottom"/>
+			<div className="memory__back" />
+			<div className="memory__bottom" />
 			<div className="memory__title">{title}</div>
-			<div className="memory__statue"/>
+			<div className="memory__statue" />
 		</div>
-	)
-}
+	);
+};
 
-export default Memory
+export default Memory;

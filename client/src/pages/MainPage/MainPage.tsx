@@ -6,21 +6,20 @@ import { ITaleResponse } from '../../types/ITaleResponse.interface.ts';
 import { animationsStart } from './utils/animationsStart.ts';
 
 interface IMainPageProps {
-	tales: ITaleResponse[],
+	tales: ITaleResponse[];
 }
 
-const MainPage:FC<IMainPageProps> = ({tales}) => {
-
+const MainPage: FC<IMainPageProps> = ({ tales }) => {
 	useEffect(() => {
-		animationsStart()
-	}, [tales])
+		animationsStart();
+	}, [tales]);
 	return (
-		<div className='mainPage'>
+		<div className="mainPage">
 			<Head title={'Добро пожаловать!'} />
-			<About title='Что это за место?' description='asd' />
+			<About title="Что это за место?" description="asd" />
 			<Body gallery_items={tales} />
 		</div>
-	)
+	);
 };
 
 export default MainPage;

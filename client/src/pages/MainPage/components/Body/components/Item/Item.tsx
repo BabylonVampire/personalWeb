@@ -11,106 +11,114 @@ interface IItemProps {
 	link: string;
 }
 
-const Item: FC<IItemProps> = ({ title, description, image, backImage, index, link }) => {
-
-	const [itemImageClassName, setItemImageClassName] = useState(`item__container`);
+const Item: FC<IItemProps> = ({
+	title,
+	description,
+	image,
+	backImage,
+	index,
+	link,
+}) => {
+	const [itemImageClassName, setItemImageClassName] =
+		useState(`item__container`);
 	const [mouseOverItemImage, setMouseOverItemImage] = useState(false);
 
-	const [textContentClassName, setTextContentClassName] = useState(`text__content`);
+	const [textContentClassName, setTextContentClassName] =
+		useState(`text__content`);
 	const [mouseOverTextContent, setMouseOverTextContent] = useState(false);
 
 	const handleZoomIn = () => {
-		setItemImageClassName(`item__container zoom_in`)
+		setItemImageClassName(`item__container zoom_in`);
 		setTimeout(() => {
-			setItemImageClassName(`item__container`)
-		}, 1000)
-	}
+			setItemImageClassName(`item__container`);
+		}, 1000);
+	};
 
 	const handleGlowUp = () => {
-		setItemImageClassName(`item__container glow_in`)
-	}
+		setItemImageClassName(`item__container glow_in`);
+	};
 
 	const handleGlowDown = () => {
-		setItemImageClassName(`item__container glow_down`)
-	}
+		setItemImageClassName(`item__container glow_down`);
+	};
 
 	const handleScrollDown = () => {
-		setTextContentClassName(`text__content scrollDown`)
-	}
+		setTextContentClassName(`text__content scrollDown`);
+	};
 
 	const handleScrollUp = () => {
-		setTextContentClassName(`text__content scrollUp`)
-	}
+		setTextContentClassName(`text__content scrollUp`);
+	};
 
 	const navigate = useNavigate();
 
 	return (
 		<div
 			className="item"
-			style={{ flexDirection: index % 2 === 1 ? "row" : "row-reverse" }}
+			style={{ flexDirection: index % 2 === 1 ? 'row' : 'row-reverse' }}
 		>
 			<div className="text__backgroundWrapper">
 				<div
 					className="text__backgroundWrapper__image"
 					id={`text__backgroundWrapper__image${index}`}
-					style={{ backgroundImage: `url(${import.meta.env.VITE_STATIC_URL}/${backImage})` }}
+					style={{
+						backgroundImage: `url(${
+							import.meta.env.VITE_STATIC_URL
+						}/${backImage})`,
+					}}
 				/>
 			</div>
 			<Link to="/">
 				<div
 					className={itemImageClassName}
 					id={`item__image__${index}`}
-					onClick={
-						() => {
-							handleZoomIn()
-							const el = document.getElementById('scene_manager')
-							el?.classList.add('blackout');
-							setTimeout(() => {
-								navigate(link);
-								el?.classList.remove('blackout');
-							}, 1000)
-						}
-					}
-					onMouseEnter={
-						() => {
-							handleGlowUp()
-							setMouseOverItemImage(true)
-						}
-					}
-					onMouseLeave={
-						() => {
-							handleGlowDown()
-							setMouseOverItemImage(false)
-						}
-					}
+					onClick={() => {
+						handleZoomIn();
+						const el = document.getElementById('scene_manager');
+						el?.classList.add('blackout');
+						setTimeout(() => {
+							navigate(link);
+							el?.classList.remove('blackout');
+						}, 1000);
+					}}
+					onMouseEnter={() => {
+						handleGlowUp();
+						setMouseOverItemImage(true);
+					}}
+					onMouseLeave={() => {
+						handleGlowDown();
+						setMouseOverItemImage(false);
+					}}
 					style={{
 						filter: `grayscale(${mouseOverItemImage ? 0 : 1})`,
-						boxShadow: mouseOverItemImage ? `0px 0px 16px 14px #fff` : `0px 0px 20px 20px #000`
+						boxShadow: mouseOverItemImage
+							? `0px 0px 16px 14px #fff`
+							: `0px 0px 20px 20px #000`,
 					}}
 				>
 					<div
 						className="item__image"
-						style={{ backgroundImage: `url(${import.meta.env.VITE_STATIC_URL}/${image})` }}
+						style={{
+							backgroundImage: `url(${
+								import.meta.env.VITE_STATIC_URL
+							}/${image})`,
+						}}
 					/>
 				</div>
 			</Link>
 			<div className="text__container">
 				<div
 					className={textContentClassName}
-					onMouseEnter={
-						() => {
-							handleScrollDown()
-							setMouseOverTextContent(true)
-						}
-					}
-					onMouseLeave={
-						() => {
-							handleScrollUp()
-							setMouseOverTextContent(false)
-						}
-					}
+					onMouseEnter={() => {
+						handleScrollDown();
+						setMouseOverTextContent(true);
+					}}
+					onMouseLeave={() => {
+						handleScrollUp();
+						setMouseOverTextContent(false);
+					}}
 					style={{
-						top: `${mouseOverTextContent ? '-100%' : '0'}`
+						top: `${mouseOverTextContent ? '-100%' : '0'}`,
 					}}
 				>
 					<div className="item__title">{title}</div>
@@ -118,8 +126,8 @@ const Item: FC<IItemProps> = ({ title, description, image, backImage, index, lin
 				</div>
 				<div className="text__frame" />
 			</div>
-		</div >
+		</div>
 	);
-}
+};
 
 export default Item;
