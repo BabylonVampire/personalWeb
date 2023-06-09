@@ -1,0 +1,13 @@
+.tale {
+	&__loading {
+		width: 100%;
+		height: 100vh;
+		background-color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: calc(var(--index) * 3);
+		font-family: 'FortuneC';
+		color: #111;
+	}
+}

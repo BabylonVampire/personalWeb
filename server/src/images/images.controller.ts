@@ -4,6 +4,7 @@ import {
 	Get,
 	Logger,
 	Param,
+	Patch,
 	Post,
 	Res,
 	UploadedFile,
@@ -31,5 +32,11 @@ export class ImagesController {
 		res.set('Content-Length', image.data.length);
 		res.send(image.data);
 		res.end();
+	}
+
+	@Patch(':name')
+	@UseInterceptors(FileInterceptor('image'))
+	updateImage(@Param('name') name: string, @UploadedFile() image) {
+		return this.imagesService.updateByFileName(name, image);
 	}
 }

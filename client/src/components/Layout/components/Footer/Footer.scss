@@ -1,4 +1,26 @@
 .footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(50, 50, 50);
+
+	&__people {
+		&__title {
+			font-size: calc(var(--index) * 1.7);
+			font-weight: 800;
+		}
+	}
+
+	&__contacts {
+		&__title {
+			font-size: calc(var(--index) * 1.7);
+			font-weight: 800;
+		}
+	}
+}
+
+.contactsAndPeopleContainer {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -7,9 +29,9 @@
 	background-color: rgb(50, 50, 50);
 	color: #fff;
 	font-family: FortuneC;
-	line-height: calc(var(--index) * 1.5);
+	line-height: calc(var(--index) * 2);
 	padding: calc(var(--index) * 2) 0;
-	font-size: calc(var(--index));
+	font-size: calc(var(--index) * 1.5);
 
 	&__contacts {
 		display: flex;
@@ -29,6 +51,67 @@
 	}
 }
 
-.footer > * {
+.contactsAndPeopleContainer > * {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	flex: 1;
+}
+
+.iconsContainer {
+	padding: 0.5em;
+}
+
+.iconsContainer > * {
+	color: #fff;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+	.footer {
+		&__people {
+			&__title {
+				font-size: calc(var(--index) * 2);
+				font-weight: 800;
+			}
+		}
+
+		&__contacts {
+			&__title {
+				font-size: calc(var(--index) * 2);
+				font-weight: 800;
+			}
+		}
+	}
+
+	.contactsAndPeopleContainer {
+		flex-direction: column;
+		line-height: calc(var(--index) * 2.8);
+		padding: calc(var(--index) * 0.5) 0;
+		font-size: calc(var(--index) * 1.8);
+	}
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+	.footer {
+		&__people {
+			&__title {
+				font-size: calc(var(--index) * 1.7);
+				font-weight: 800;
+			}
+		}
+
+		&__contacts {
+			&__title {
+				font-size: calc(var(--index) * 1.7);
+				font-weight: 800;
+			}
+		}
+	}
+
+	.contactsAndPeopleContainer {
+		flex-direction: row;
+		line-height: calc(var(--index) * 2);
+		padding: calc(var(--index) * 0.5) 0;
+		font-size: calc(var(--index) * 1.5);
+	}
 }

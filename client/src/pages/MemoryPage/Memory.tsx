@@ -11,7 +11,6 @@ const Memory = () => {
 			<div className="memory__back" />
 			<div className="memory__bottom" />
 			<div className="memory__title">{title}</div>
-			<div className="memory__statue" />
 		</div>
 	);
 };

@@ -78,8 +78,8 @@
 
 	&__frame {
 		position: relative;
-		bottom: 125%;
-		height: 20%;
+		bottom: 115%;
+		height: 10%;
 		background-image: url(/src/pics/MainPage/about_frame.png);
 		background-size: cover;
 		filter: invert(1);
@@ -88,17 +88,17 @@
 }
 
 .scrollDown {
-	animation: scroll_down 0.5s ease-in-out 1 alternate forwards;
+	animation: scroll_down 0.3s linear 1 alternate forwards;
 }
 
 .scrollUp {
-	animation: scroll_up 0.5s ease-in-out 1 alternate forwards;
+	animation: scroll_up 0.3s linear 1 alternate forwards;
 }
 
 .glow_in {
 	animation-name: glowing_in;
-	animation-duration: 0.5s;
-	animation-timing-function: ease-in-out;
+	animation-duration: 0.3s;
+	animation-timing-function: linear;
 	animation-iteration-count: 1;
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
@@ -106,8 +106,8 @@
 
 .glow_down {
 	animation-name: glowing_down;
-	animation-duration: 0.5s;
-	animation-timing-function: ease-in-out;
+	animation-duration: 0.3s;
+	animation-timing-function: linear;
 	animation-iteration-count: 1;
 	animation-direction: alternate;
 	animation-fill-mode: forwards;
@@ -187,5 +187,11 @@
 	to {
 		width: calc(var(--index) * 20);
 		height: calc(var(--index) * 30);
+	}
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+	.text__container {
+		display: none;
 	}
 }

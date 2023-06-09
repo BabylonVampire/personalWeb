@@ -8,8 +8,18 @@ interface IBodyProps {
 }
 
 const Body: FC<IBodyProps> = ({ gallery_items }) => {
+	const noTaleText = 'Истории не найдены';
+
+	if (!gallery_items.length) {
+		return (
+			<main>
+				<div className="noTalesTitle">{noTaleText}</div>
+			</main>
+		);
+	}
+
 	return (
-		<div className="body">
+		<main>
 			<div className="gallery">
 				{gallery_items.map((item) => {
 					return (
@@ -27,7 +37,7 @@ const Body: FC<IBodyProps> = ({ gallery_items }) => {
 					);
 				})}
 			</div>
-		</div>
+		</main>
 	);
 };
 

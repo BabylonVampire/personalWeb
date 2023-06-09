@@ -70,4 +70,29 @@ export class ImagesService {
 			);
 		}
 	}
+
+	async updateByFileName(name: string, image) {
+		try {
+			const { buffer, originalname } = image;
+			const newImage = await this.imageRepository.findOne({
+				where: { name },
+			});
+			if (!newImage) {
+				throw new HttpException(
+					`Изображение c именем: ${name} не найдено`,
+					HttpStatus.NOT_FOUND
+				);
+			}
+			await newImage.update({
+				data: buffer,
+				mimetype: `image/${extname(originalname).substring(1)}`,
+			});
+			return image;
+		} catch (error) {
+			throw new HttpException(
+				'Не удалось обновить файл',
+				HttpStatus.INTERNAL_SERVER_ERROR
+			);
+		}
+	}
 }

@@ -1,19 +1,19 @@
-import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
+import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateContentBlockDto {
 	//content block
 	@ApiProperty()
-	readonly contentId: string; 
+	readonly contentId: string;
 	@ApiProperty()
-	readonly index: string; 
+	readonly index: string;
 	@ApiProperty()
-	readonly className: string; 
+	readonly className: string;
 	@ApiProperty()
-	readonly type: string; 
+	readonly type: string;
 	@ApiProperty()
-	readonly text: string; 
+	readonly text: string;
 	@ApiProperty()
-	readonly image: string
+	readonly image?: string;
 
 	//options
 	@ApiProperty()

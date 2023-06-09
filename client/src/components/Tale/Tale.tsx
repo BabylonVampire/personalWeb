@@ -22,7 +22,7 @@ const Tale: FC<ITale> = ({ tale }) => {
 	console.log(fullTale);
 
 	if (fullTale === undefined) {
-		return <div className="loading">Загрузка...</div>;
+		return <div className="tale__loading">Загрузка...</div>;
 	}
 
 	const fairyDefinition = (title: string) => {

@@ -1,14 +1,15 @@
-import { FC, useEffect, useState } from 'react';
-import './App.scss';
-import Layout from './components/Layout/Layout.tsx';
-import MainPage from './pages/MainPage/MainPage.tsx';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Tale from './components/Tale/Tale.tsx';
-import GratitudePage from './pages/GratitudePage/GratitudePage.tsx';
+import { FC, useEffect, useRef, useState } from 'react';
 import { lines } from './data/pages/gratitudePageData.ts';
 import { getTales } from './data/tales/getTales.ts';
 import { ITaleResponse } from './types/ITaleResponse.interface.ts';
+import Layout from './components/Layout/Layout.tsx';
+import MainPage from './pages/MainPage/MainPage.tsx';
+import Tale from './components/Tale/Tale.tsx';
+import GratitudePage from './pages/GratitudePage/GratitudePage.tsx';
 import Memory from './pages/MemoryPage/Memory.tsx';
+import UnknownPage from './pages/UnknownPage/UnknownPage.tsx';
+import './App.scss';
 
 const App: FC = () => {
 	const [tales, setTales] = useState<ITaleResponse[]>([]);
@@ -18,7 +19,7 @@ const App: FC = () => {
 	}, []);
 
 	return (
-		<div className="App" id="scroll-bar">
+		<div className="App" data-scroll-container>
 			<BrowserRouter>
 				<Layout>
 					<Routes>
@@ -37,6 +38,7 @@ const App: FC = () => {
 								/>
 							);
 						})}
+						<Route path="*" element={<UnknownPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>

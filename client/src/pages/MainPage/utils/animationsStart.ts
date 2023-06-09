@@ -49,9 +49,9 @@ export const animationsStart = () => {
 	images.forEach((image) => {
 		gsap.fromTo(
 			image,
-			{ top: '-80px' },
+			{ top: '-3em' },
 			{
-				top: '80px',
+				top: '1.5em',
 				scrollTrigger: {
 					start: '-200',
 					end: 'bottom',

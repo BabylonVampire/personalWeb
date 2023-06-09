@@ -1,9 +1,12 @@
 .about {
+	top: -8vh;
 	width: 100%;
 	height: 100vh;
 	position: relative;
 	z-index: 4;
-	background-color: #111111;
+	background-image: url(/src/pics/MainPage/about__back.png);
+	background-size: cover;
+	background-position: center center;
 
 	&__wrapper {
 		width: 100%;
@@ -11,14 +14,6 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-	}
-
-	&__bug__container {
-		width: 100%;
-		height: 100vh;
-		overflow: hidden;
-		position: absolute;
-		z-index: 5;
 	}
 
 	&__container {
@@ -30,18 +25,18 @@
 		align-items: center;
 		color: #fff;
 		border-radius: 8px;
-		font-size: calc(var(--index));
+		font-size: calc(var(--index) * 1.5);
 		font-family: FortuneC;
 	}
 
 	&__title {
-		font-size: calc(var(--index) * 2);
+		font-size: calc(var(--index) * 3);
 		font-family: fontisland;
 	}
 
 	&__frame {
 		width: 100%;
-		height: 15%;
+		height: 10%;
 		background-image: url(/src/pics/MainPage/about_frame.png);
 		background-size: cover;
 		filter: invert(1);

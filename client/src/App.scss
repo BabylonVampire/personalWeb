@@ -4,6 +4,10 @@
 	user-select: none;
 }
 
+:root {
+	--index: calc(1vh + 1vw);
+}
+
 .App {
 	text-align: center;
 }
