@@ -51,6 +51,21 @@
 	}
 }
 
+.copyrights {
+	background-color: #111111;
+	height: calc(var(--index) * 1.5);
+	max-height: 50px;
+	color: #fff;
+	font-family: FortuneC;
+	font-size: calc(var(--index));
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	&__text {
+		margin-left: var(--index);
+	}
+}
+
 .contactsAndPeopleContainer > * {
 	display: flex;
 	flex-direction: column;

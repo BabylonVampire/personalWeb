@@ -3,12 +3,14 @@ import { FC, useEffect } from 'react';
 import './GratitudePage.scss';
 import setSky from 'fairy-anims/src/Stars';
 import { ILinesOptions } from 'fairy-anims/src/Lines/lines-options.interface';
+import { useNavigate } from 'react-router-dom';
 
 interface IGratitudePageProps {
 	lines: string[];
 }
 
 const GratitudePage: FC<IGratitudePageProps> = ({ lines }) => {
+	const navigate = useNavigate();
 	useEffect(() => {
 		const options: ILinesOptions = {
 			shadow: false,
@@ -31,7 +33,10 @@ const GratitudePage: FC<IGratitudePageProps> = ({ lines }) => {
 				<div className="gratitudePage__container__background" />
 				<div className="gratitudePage__container__image">
 					<div className="gratitudePage__container__image__base" />
-					<div className="gratitudePage__container__image__figure gratitudePage__figure__default" />
+					<div
+						className="gratitudePage__container__image__figure gratitudePage__figure__default"
+						onMouseUp={() => navigate('/pan')}
+					/>
 				</div>
 			</div>
 		</div>

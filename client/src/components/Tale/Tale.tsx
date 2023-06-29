@@ -4,6 +4,7 @@ import Dragon from '../../pages/DragonPage/Dragon';
 import Waste from '../../pages/WastePage/Waste';
 import { ITaleResponse } from '../../types/ITaleResponse.interface';
 import { getTale } from '../../data/tales/getTale';
+import './Tale.scss';
 
 interface ITale {
 	tale: ITaleResponse;

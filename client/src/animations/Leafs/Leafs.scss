@@ -1,0 +1,28 @@
+.leaf {
+	top: 50vh;
+	left: 40vw;
+	width: calc(var(--index));
+	height: calc(var(--index) / 2.5);
+	border-bottom-left-radius: 50%;
+	border-top-right-radius: 50%;
+	background-color: #131e18;
+	position: absolute;
+	animation: fall 3s ease-in-out infinite forwards;
+}
+
+@keyframes fall {
+	0% {
+		rotate: #{random(360)}deg;
+		opacity: 0;
+		left: 40vw;
+	}
+	50% {
+		opacity: 1;
+		left: 40vw;
+	}
+	100% {
+		rotate: #{random(360)}deg;
+		opacity: 0;
+		left: 80vw;
+	}
+}

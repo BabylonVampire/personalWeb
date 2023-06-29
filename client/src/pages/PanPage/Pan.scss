@@ -1,0 +1,40 @@
+.panPage {
+	position: relative;
+	overflow: hidden;
+	&__container {
+		position: absolute;
+		background-attachment: fixed;
+		width: 100%;
+		height: -webkit-fill-available;
+		background-image: url(/src/pics/Pan/back.png);
+		background-size: cover;
+		background-position: center center;
+		filter: brightness(0.25) blur(2px);
+	}
+	&__tale {
+		position: relative;
+		width: 100%;
+		height: auto;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: #fff;
+		&__title {
+			margin-top: var(--index);
+			font-family: Rurintania;
+			font-size: calc(var(--index) * 3);
+		}
+		&__text,
+		&__ps,
+		&__pps {
+			mix-blend-mode: color-dodge;
+			font-family: FortuneC;
+			width: 90%;
+			line-height: calc(var(--index) * 2);
+			font-size: calc(var(--index) * 1.5);
+			padding-bottom: calc(var(--index) * 2);
+		}
+	}
+}

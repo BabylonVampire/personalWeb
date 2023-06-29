@@ -11,9 +11,9 @@ interface IMainPageProps {
 
 const MainPage: FC<IMainPageProps> = ({ tales }) => {
 	const description =
-		'Склад забытых переживаний, что растворятся в утренней дымке, как только солнце взайдет.';
+		'Склад забытых переживаний, что растворятся в утренней дымке, как только солнце взойдет.';
 	const descriptionPS = 'Sed frustra in aeterna nocte.';
-	const headTitle = 'Добро пожаловать!';
+	const headTitle = 'Вавилонский сказитель';
 	const aboutTitle = 'Что это за место?';
 
 	useEffect(() => {

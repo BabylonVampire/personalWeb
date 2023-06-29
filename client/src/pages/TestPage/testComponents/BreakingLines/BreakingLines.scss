@@ -1,0 +1,19 @@
+.word {
+	display: inline-block;
+	color: #fff;
+	margin-right: calc(var(--index) * 0.5);
+	font-family: FortuneC;
+	font-size: 1.3rem;
+	animation: breakLine 1s forwards 1;
+}
+
+@-webkit-keyframes breakLine {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translate(0, 80px) rotate(90deg);
+		opacity: 0;
+	}
+}

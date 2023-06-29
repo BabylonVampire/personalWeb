@@ -10,6 +10,8 @@ import GratitudePage from './pages/GratitudePage/GratitudePage.tsx';
 import Memory from './pages/MemoryPage/Memory.tsx';
 import UnknownPage from './pages/UnknownPage/UnknownPage.tsx';
 import './App.scss';
+import TestPage from './pages/TestPage/TestPage.tsx';
+import Pan from './pages/PanPage/Pan.tsx';
 
 const App: FC = () => {
 	const [tales, setTales] = useState<ITaleResponse[]>([]);
@@ -39,6 +41,8 @@ const App: FC = () => {
 							);
 						})}
 						<Route path="*" element={<UnknownPage />} />
+						<Route path="pan" element={<Pan />} />
+						<Route path="/test" element={<TestPage />} />
 					</Routes>
 				</Layout>
 			</BrowserRouter>

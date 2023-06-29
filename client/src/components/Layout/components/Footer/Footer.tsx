@@ -17,65 +17,70 @@ const Footer: FC<IFooterProps> = ({ people, email, phone }) => {
 	const emailLink = '';
 
 	return (
-		<div className="footer">
-			<div className="contactsAndPeopleContainer">
-				<div className="footer__people">
-					<div className="footer__people__title">Причастные</div>
-					<Divider />
-					<div className="footer__people__container">
-						{people.map((person) => {
-							return (
-								<div className="person" key={person}>
-									{person}
-								</div>
-							);
-						})}
+		<>
+			<div className="footer">
+				<div className="contactsAndPeopleContainer">
+					<div className="footer__people">
+						<div className="footer__people__title">Причастные</div>
+						<Divider />
+						<div className="footer__people__container">
+							{people.map((person) => {
+								return (
+									<div className="person" key={person}>
+										{person}
+									</div>
+								);
+							})}
+						</div>
 					</div>
-				</div>
-				<div className="footer__contacts">
-					<div className="footer__contacts__title">Контакты</div>
-					<Divider />
-					<div className="iconsContainer">
-						<a href={`${telegramLink}`}>
-							<TelegramIcon
-								sx={{
-									fontSize: {
-										xs: '1.5rem',
-										md: '2rem',
-										lg: '2.5rem',
-										xl: '3rem',
-									},
-								}}
-							/>
-						</a>
-						<a href={`${gitHubLink}`}>
-							<GitHubIcon
-								sx={{
-									fontSize: {
-										xs: '1.5rem',
-										md: '2rem',
-										lg: '2.5rem',
-										xl: '3rem',
-									},
-								}}
-							/>
-						</a>
-						<a href={`${emailLink}`}>
-							<AlternateEmailIcon
-								sx={{
-									fontSize: {
-										xs: '1.5rem',
-										md: '2rem',
-										lg: '2.5rem',
-										xl: '3rem',
-									},
-								}}
-							/>
-						</a>
+					<div className="footer__contacts">
+						<div className="footer__contacts__title">Контакты</div>
+						<Divider />
+						<div className="iconsContainer">
+							<a href={`${telegramLink}`}>
+								<TelegramIcon
+									sx={{
+										fontSize: {
+											xs: '1.5rem',
+											md: '2rem',
+											lg: '2.5rem',
+											xl: '3rem',
+										},
+									}}
+								/>
+							</a>
+							<a href={`${gitHubLink}`}>
+								<GitHubIcon
+									sx={{
+										fontSize: {
+											xs: '1.5rem',
+											md: '2rem',
+											lg: '2.5rem',
+											xl: '3rem',
+										},
+									}}
+								/>
+							</a>
+							<a href={`${emailLink}`}>
+								<AlternateEmailIcon
+									sx={{
+										fontSize: {
+											xs: '1.5rem',
+											md: '2rem',
+											lg: '2.5rem',
+											xl: '3rem',
+										},
+									}}
+								/>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			<div className="copyrights">
+				<div className="copyrights__text">BabylonTales © 2023</div>
+			</div>
+		</>
 	);
 };
 
