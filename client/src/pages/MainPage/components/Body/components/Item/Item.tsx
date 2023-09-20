@@ -21,33 +21,12 @@ const Item: FC<IItemProps> = ({
 }) => {
 	const [itemImageClassName, setItemImageClassName] =
 		useState(`item__container`);
-	const [mouseOverItemImage, setMouseOverItemImage] = useState(false);
-
-	const [textContentClassName, setTextContentClassName] =
-		useState(`text__content`);
-	const [mouseOverTextContent, setMouseOverTextContent] = useState(false);
 
 	const handleZoomIn = () => {
 		setItemImageClassName(`item__container zoom_in`);
 		setTimeout(() => {
 			setItemImageClassName(`item__container`);
 		}, 1000);
-	};
-
-	const handleGlowUp = () => {
-		setItemImageClassName(`item__container glow_in`);
-	};
-
-	const handleGlowDown = () => {
-		setItemImageClassName(`item__container glow_down`);
-	};
-
-	const handleScrollDown = () => {
-		setTextContentClassName(`text__content scrollDown`);
-	};
-
-	const handleScrollUp = () => {
-		setTextContentClassName(`text__content scrollUp`);
 	};
 
 	const navigate = useNavigate();
@@ -81,20 +60,6 @@ const Item: FC<IItemProps> = ({
 							el?.classList.remove('blackout');
 						}, 1000);
 					}}
-					onMouseEnter={() => {
-						handleGlowUp();
-						setMouseOverItemImage(true);
-					}}
-					onMouseLeave={() => {
-						handleGlowDown();
-						setMouseOverItemImage(false);
-					}}
-					style={{
-						filter: `grayscale(${mouseOverItemImage ? 0 : 1})`,
-						boxShadow: mouseOverItemImage
-							? `0px 0px 16px 14px #fff`
-							: `0px 0px 20px 20px #000`,
-					}}
 				>
 					<div
 						className="item__image"
@@ -107,20 +72,7 @@ const Item: FC<IItemProps> = ({
 				</div>
 			</Link>
 			<div className="text__container">
-				<div
-					className={textContentClassName}
-					onMouseEnter={() => {
-						handleScrollDown();
-						setMouseOverTextContent(true);
-					}}
-					onMouseLeave={() => {
-						handleScrollUp();
-						setMouseOverTextContent(false);
-					}}
-					style={{
-						top: `${mouseOverTextContent ? '-100%' : '0'}`,
-					}}
-				>
+				<div className="text__content">
 					<div className="item__title">{title}</div>
 					<div className="item__description">{description}</div>
 				</div>

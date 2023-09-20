@@ -89,7 +89,7 @@ export const animationsStart = () => {
 			{ opacity: 0 },
 			{
 				opacity: 1,
-				duration: 1,
+				duration: 0.2,
 				yoyo: true,
 				scrollTrigger: {
 					start: '-450',

@@ -3,4 +3,11 @@
 	font-size: 4.5rem;
 	padding: 2em;
 	font-family: Rurintania;
+	transition: 0.3s;
+}
+
+@media (max-width: 700px) {
+	.tale_title {
+		font-size: calc(var(--index) * 3.5);
+	}
 }

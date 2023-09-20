@@ -5,4 +5,10 @@
 	color: #ddd;
 	padding: 2em;
 	font-family: FortuneC;
+	transition: 0.3s;
+}
+@media (max-width: 1200px) {
+	.tale_text {
+		width: 80%;
+	}
 }

@@ -37,3 +37,10 @@
 		background-color: #111111;
 	}
 }
+
+@media (max-width: 1200px) {
+	.seaTale__container > * {
+		margin: 0 auto !important;
+		left: 0;
+	}
+}

@@ -27,10 +27,15 @@
 	&__title {
 		font-family: Rurintania;
 		position: absolute;
-		left: 45vw;
-		top: 40vh;
-		color: #ffffff80;
-		font-size: calc(var(--index) * 3);
+		margin: auto auto;
+		color: rgba(255, 255, 255);
+		opacity: 0.5;
+		font-size: calc(var(--index) * 5);
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__container {
@@ -89,6 +94,7 @@
 	overflow: hidden;
 	border-radius: 100px;
 	overflow: hidden;
+	transition: 0.3s;
 }
 
 @-webkit-keyframes appearance {
@@ -98,5 +104,21 @@
 
 	to {
 		background-color: #111111;
+	}
+}
+
+@media (max-width: 800px) {
+	.epilogue {
+		border-radius: 0;
+		width: 100vw;
+	}
+}
+
+@media (max-width: 1200px) {
+	.dragon__container > * {
+		margin: 0 auto !important;
+	}
+	.epilogue {
+		margin: 5em auto !important;
 	}
 }
